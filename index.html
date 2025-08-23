@@ -1,113 +1,224 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PoorCoin (POOR) — Official Website</title>
-  <meta name="description" content="PoorCoin (POOR) is a community-driven meme token on BNB Smart Chain. Fair, transparent and fun. Trade on PancakeSwap.">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta name="description" content="PoorCoin (POOR) — a community-driven meme token on BNB Smart Chain. Fun, transparent and fair." />
+  <meta property="og:title" content="PoorCoin (POOR) — Official Website" />
+  <meta property="og:description" content="Community-driven meme token on BNB Smart Chain." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://poorcoin.net/" />
   <style>
     :root{
-      --bg:#f7fbff; --panel:#ffffff; --muted:#5b6b7c; --text:#12212e; --primary:#2ea44f; --accent:#31c3a6; --border:#e6eef5;
-      --chip:#eef6ff; --chipb:#d9ecff;
+      --accent:#27ae60;       /* основен зелен */
+      --accent-2:#20bf6b;     /* втори зелен за градиент/hover */
+      --text:#1f2937;         /* тъмно сиво */
+      --muted:#6b7280;        /* по-светло сиво */
+      --bg1:#e8f8ff;          /* градиент начало */
+      --bg2:#f9fbff;          /* градиент край */
+      --card:#ffffff;         /* карта */
+      --radius:18px;
+      --shadow:0 10px 30px rgba(0,0,0,.08);
     }
+
+    /* Глобални */
     *{box-sizing:border-box}
-    html,body{margin:0}
-    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#f3fbff 0%, #f8fff5 100%);color:var(--text);line-height:1.6}
-    .container{width:min(1080px,92vw);margin-inline:auto}
-    a{color:var(--primary);text-decoration:none}
-    .btn{display:inline-block;padding:.85rem 1.1rem;border-radius:.9rem;background:var(--primary);color:#fff;font-weight:800;border:1px solid transparent;transition:transform .1s ease, box-shadow .1s ease}
-    .btn:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(46,164,79,.2)}
-    .btn.outline{background:#fff;color:var(--primary);border:1px solid var(--primary)}
-    .btn.ghost{background:#e9f8ef;color:#0d2917;border:1px solid #c7ebd1}
-    .chip{display:inline-block;background:linear-gradient(180deg,var(--chip),#f7fbff);border:1px solid var(--chipb);padding:.45rem .7rem;border-radius:.7rem;color:#2a3b4c;font-weight:600}
-    header.site{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.75);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--border)}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0}
-    .brand{display:flex;align-items:center;gap:.6rem;color:#0f1f2a;font-weight:900}
-    .brand img{width:40px;height:40px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,.08)}
-    .brand span{font-size:1.15rem}
-    .links{display:flex;gap:1rem;align-items:center}
-    .hero{padding:56px 0 24px}
-    .hero-inner{text-align:center}
-    h1{font-size:clamp(1.9rem,3.2vw,3rem);line-height:1.15;margin:.3rem 0}
-    .sub{color:var(--muted);max-width:720px;margin:0 auto}
-    .cta{display:flex;justify-content:center;gap:.7rem;flex-wrap:wrap;margin-top:14px}
-    .section{padding:56px 0}
-    .grid{display:grid;gap:1.1rem}
-    .two{grid-template-columns:repeat(2,minmax(0,1fr))}
-    .three{grid-template-columns:repeat(3,minmax(0,1fr))}
-    @media (max-width:900px){.two,.three{grid-template-columns:1fr}}
-    .card{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:18px}
-    h2{font-size:clamp(1.45rem,2.2vw,2rem);margin:.2rem 0 .9rem}
-    h3{margin:.2rem 0 .6rem}
-    ul.clean{padding-left:1.1rem}
-    .stat{display:flex;flex-direction:column;gap:.2rem;align-items:center;text-align:center}
-    .stat .v{font-size:1.35rem;font-weight:900}
-    .muted{color:var(--muted)}
-    .contract{display:flex;gap:.6rem;align-items:center;background:#f4fbf6;border:1px dashed #c5ead2;border-radius:12px;padding:.6rem .75rem}
-    .contract code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;word-break:break-all}
-    .copy{margin-left:auto;border:1px solid #cfeadd;background:#fff;border-radius:.6rem;padding:.4rem .6rem;cursor:pointer}
-    .copy:hover{background:#f1fff7}
-    .timeline{position:relative;margin-top:8px;padding-left:20px}
-    .timeline:before{content:"";position:absolute;left:6px;top:4px;bottom:4px;width:2px;background:linear-gradient(var(--accent),transparent)}
-    .titem{position:relative;margin:16px 0}
-    .dot{position:absolute;left:-1px;top:.35rem;width:10px;height:10px;border-radius:999px;background:var(--accent);box-shadow:0 0 0 .35rem rgba(49,195,166,.25)}
-    footer.site{border-top:1px solid var(--border);background:#fff}
-    .foot{display:flex;justify-content:space-between;align-items:center;gap:.8rem;padding:18px 0;flex-wrap:wrap}
-    .socials{display:flex;gap:.9rem}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background: linear-gradient(135deg, var(--bg1), var(--bg2));
+    }
+    a{color:inherit}
+
+    .container{
+      max-width:1080px;
+      margin:0 auto;
+      padding:28px 20px 56px;
+    }
+
+    /* Header */
+    .hero{
+      display:flex;
+      align-items:center;
+      gap:24px;
+      padding:22px;
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+    .logo{
+      width:86px;
+      height:86px;
+      border-radius:20px;
+      object-fit:cover;
+      box-shadow:0 6px 18px rgba(39,174,96,.18);
+      flex:0 0 auto;
+    }
+    .title-wrap{
+      flex:1;
+    }
+    h1{
+      margin:0 0 6px;
+      font-size:clamp(28px, 3.2vw, 40px);
+      letter-spacing:.2px;
+    }
+    .tagline{
+      margin:0;
+      color:var(--muted);
+      font-size:clamp(14px, 1.8vw, 16px);
+    }
+
+    /* Карта със съдържание */
+    .card{
+      margin-top:22px;
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:28px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap:30px;
+    }
+    @media (max-width:860px){
+      .grid{grid-template-columns:1fr}
+      .hero{flex-direction:column; text-align:center}
+      .title-wrap{align-items:center}
+    }
+
+    h2{
+      margin:0 0 12px;
+      font-size:clamp(20px, 2.4vw, 26px);
+    }
+    p{margin:0 0 14px; line-height:1.6}
+
+    /* Инфо чипове */
+    .chips{display:flex; flex-wrap:wrap; gap:10px; margin-top:14px}
+    .chip{
+      padding:8px 12px;
+      border-radius:999px;
+      background:#f3f4f6;
+      color:#374151;
+      font-size:14px;
+    }
+
+    /* Бутони */
+    .buttons{display:flex; flex-wrap:wrap; gap:12px; margin-top:16px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:12px 18px;
+      border-radius:12px;
+      text-decoration:none;
+      font-weight:700;
+      transition:transform .12s ease, box-shadow .2s ease, background .2s ease;
+      box-shadow: 0 6px 16px rgba(39,174,96,.18);
+      background:linear-gradient(135deg, var(--accent), var(--accent-2));
+      color:#fff;
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .btn.secondary{
+      background:#eef2ff;
+      color:#374151;
+      box-shadow:none;
+      border:1px solid #e5e7eb;
+    }
+    .btn.full{width:100%}
+
+    /* Списък с характеристики */
+    .list{display:grid; gap:10px; margin-top:10px}
+    .item{
+      display:flex; gap:12px; align-items:flex-start;
+      padding:12px 14px;
+      border:1px solid #eef0f3; border-radius:12px; background:#fafbff;
+    }
+    .item strong{display:block; font-size:14px}
+    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}
+
+    /* Footer */
+    footer{
+      text-align:center; color:var(--muted);
+      font-size:14px; margin-top:22px;
+    }
+
+    /* Малък helper за копиране */
+    .copy{
+      display:inline-flex; align-items:center; gap:8px; white-space:nowrap;
+      padding:8px 10px; border-radius:10px; border:1px dashed #d1d5db; background:#ffffff;
+      cursor:pointer; user-select:none;
+    }
+    .copy:hover{background:#f9fafb}
   </style>
 </head>
 <body>
-  <!-- Top nav -->
-  <header class="site">
-    <div class="container nav">
-      <a class="brand" href="#">
-        <img src="https://ipfs.io/ipfs/bafkreifvwdfzahh6ul2bseueh4427uea722o3m7zxlcnuc4m4orgn4i4ry" alt="PoorCoin logo">
-        <span>PoorCoin</span>
-      </a>
-      <nav class="links">
-        <a href="#about">About</a>
-        <a href="#tokenomics">Tokenomics</a>
-        <a href="#buy">Buy</a>
-        <a href="#roadmap">Roadmap</a>
-        <a class="btn" href="https://t.me/poorcoin_bsc" target="_blank" rel="noopener">Join Telegram</a>
-      </nav>
-    </div>
-  </header>
+  <div class="container">
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container hero-inner">
-      <span class="chip">BNB Smart Chain • BEP-20</span>
-      <h1>Community-driven meme token that keeps it fun & fair.</h1>
-      <p class="sub">POOR runs on BNB Smart Chain with a fixed supply and a simple mission: build together with transparency and good vibes.</p>
-      <div class="cta">
-        <a class="btn" href="https://pancakeswap.finance/swap?outputCurrency=0x4B336AABbB057503aD2a588201D56F0e6EadC281" target="_blank" rel="noopener">Buy on PancakeSwap</a>
-        <a class="btn outline" href="https://bscscan.com/token/0x4B336AABbB057503aD2a588201D56F0e6EadC281" target="_blank" rel="noopener">View on BscScan</a>
-        <a class="btn ghost" href="https://www.geckoterminal.com/bsc/pools/0xec7e56657bb005d3e10add91f72459fd3bbee2d1" target="_blank" rel="noopener">Live Chart</a>
+    <!-- HERO -->
+    <header class="hero">
+      <img class="logo"
+           src="https://gateway.pinata.cloud/ipfs/bafkreifvwdfzahh6ul2bseueh4427uea722o3m7zxlcnuc4m4orgn4i4ry"
+           alt="PoorCoin Logo" />
+      <div class="title-wrap">
+        <h1>PoorCoin (POOR)</h1>
+        <p class="tagline">The community-driven meme token on BNB Smart Chain.</p>
       </div>
-    </div>
-  </section>
+      <a class="btn" href="https://pancakeswap.finance/swap?outputCurrency=0x4B3...C281" target="_blank" rel="noopener">Buy on PancakeSwap</a>
+    </header>
 
-  <!-- About / Quick links -->
-  <section id="about" class="section">
-    <div class="container grid two">
-      <div class="card">
-        <h2>About PoorCoin</h2>
-        <p>PoorCoin (POOR) is a decentralized meme token on BNB Smart Chain focused on community, clarity and meme energy. Total supply is <b>1,000,000,000 POOR</b>. No over-engineering — just vibes, holders and steady growth.</p>
-        <ul class="clean">
-          <li>Open contract • Public pair on PancakeSwap (V2)</li>
-          <li>Transparent supply and simple tokenomics</li>
-          <li>Community-first roadmap and culture</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Smart Contract</h3>
-        <div class="contract">
-          <code id="ca">0x4B336AABbB057503aD2a588201D56F0e6EadC281</code>
-          <button class="copy" onclick="copyCA()">Copy</button>
-        </div>
-        <div style="margin-top:10px;display:grid;gap:.45rem">
-          <a href="https://bscscan.com/token/0x4B336AABbB057503aD2a588201D56F0e6EadC281" target="_blank" rel="noopener">BscScan (token)</a>
-          <a href="https://pancakeswap.finance/swap?outputCurrency=0x4B336AABbB057503aD2a588201D56F0e6EadC281" target="_blank" rel="noope
+    <!-- CONTENT -->
+    <main class="card">
+      <div class="grid">
+        <!-- Лява колона -->
+        <section>
+          <h2>About PoorCoin</h2>
+          <p>
+            PoorCoin (POOR) is a decentralized meme token built by and for the community.
+            Our mission is to keep things fun, transparent and fair while we experiment,
+            learn and grow together.
+          </p>
+
+          <div class="chips">
+            <span class="chip">Chain: BNB Smart Chain</span>
+            <span class="chip">Ticker: POOR</span>
+            <span class="chip">Supply: 1,000,000,000</span>
+          </div>
+
+          <div class="buttons">
+            <a class="btn" href="https://t.me/yourtelegram" target="_blank" rel="noopener">Telegram</a>
+            <a class="btn secondary" href="https://twitter.com/yourtwitter" target="_blank" rel="noopener">Twitter/X</a>
+          </div>
+        </section>
+
+        <!-- Дясна колона -->
+        <aside>
+          <h2>Quick Links</h2>
+
+          <div class="list">
+            <div class="item">
+              <div>
+                <strong>Contract</strong>
+                <div class="copy" id="copyContract"
+                     data-full="0x4B3...C281">
+                  <span class="mono" id="contractText">0x4B3...C281</span>
+                  <span>• Copy</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div>
+                <strong>Trade</strong>
+                <a class="btn full"
+                   href="https://pancakeswap.finance/swap?outputCurrency=0x4B3...C281"
+                   target="_blank" rel="noopener">Open PancakeSwap</a>
+              </div>
+            </div>
+
+            <div class="item">
+              <div>
+                <strong>DexTools</strong>
+                <a class="btn secondary full"
+                   href="https://www.dextools.io/app/en/bnb/pair-explorer/0xEC7...E2D1
