@@ -3,9 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PoorCoin (POOR) - Official Website</title>
+  <title>PoorCoin (POOR) — Official Website</title>
+  <meta name="description" content="PoorCoin (POOR) is a community-driven meme token on BNB Smart Chain. Trade on PancakeSwap, read the whitepaper, and join the community." />
   <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="PoorCoin (POOR) - community-driven meme token on BNB Smart Chain." />
+
+  <!-- Open Graph / Twitter for nicer shares -->
+  <meta property="og:title" content="PoorCoin (POOR) — Official Website" />
+  <meta property="og:description" content="Community-driven token on BNB Smart Chain. Fair, transparent, and fun." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://poorcoin.net/" />
+  <meta property="og:image" content="https://gateway.pinata.cloud/ipfs/bafybeihhtjwdnldwmn6u4yjhfh3a7owqslzgxb7c7znpg5ww4b3yky7e5e/poorcoin-logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="https://gateway.pinata.cloud/ipfs/bafybeihhtjwdnldwmn6u4yjhfh3a7owqslzgxb7c7znpg5ww4b3yky7e5e/poorcoin-logo.png" />
 </head>
 <body>
   <header class="site-header">
@@ -20,8 +29,10 @@
       <nav class="nav">
         <a href="#about">About</a>
         <a href="#tokenomics">Tokenomics</a>
-        <a href="#contract">Contract</a>
-        <a class="btn btn--primary" target="_blank" href="https://pancakeswap.finance/swap?outputCurrency=0x4B336AABbB057503aD2a588201D56F0e6EadC281">Buy on PancakeSwap</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#faq">FAQ</a>
+        <a href="whitepaper.html">Whitepaper</a>
+        <a class="btn btn--primary" target="_blank" href="https://pancakeswap.finance/swap?outputCurrency=0x4B336AABbB057503aD2a588201D56F0e6EadC281">Buy</a>
       </nav>
     </div>
   </header>
@@ -49,22 +60,10 @@
       <div class="container">
         <h3 class="section-title">Tokenomics</h3>
         <div class="cards">
-          <div class="card">
-            <div class="k">Total Supply</div>
-            <div class="v">1,000,000,000 POOR</div>
-          </div>
-          <div class="card">
-            <div class="k">In Circulation</div>
-            <div class="v">~695,089,465 POOR</div>
-          </div>
-          <div class="card">
-            <div class="k">Liquidity (est.)</div>
-            <div class="v">12,000,000 POOR + 0.011 BNB</div>
-          </div>
-          <div class="card">
-            <div class="k">Holders</div>
-            <div class="v">Growing daily</div>
-          </div>
+          <div class="card"><div class="k">Total Supply</div><div class="v">1,000,000,000 POOR</div></div>
+          <div class="card"><div class="k">In Circulation</div><div class="v">~695,089,465 POOR</div></div>
+          <div class="card"><div class="k">Liquidity (est.)</div><div class="v">12,000,000 POOR + 0.011 BNB</div></div>
+          <div class="card"><div class="k">Holders</div><div class="v">Growing daily</div></div>
         </div>
       </div>
     </section>
@@ -84,7 +83,8 @@
       <div class="container two-col">
         <div class="col">
           <h3>About PoorCoin</h3>
-          <p>PoorCoin is a playful meme token with a serious commitment to transparency. No promises, no financial advice—just community vibes. Join us, share ideas, and have fun.</p>
+          <p>PoorCoin is a playful meme token with a serious commitment to transparency. No promises, no financial advice — just community vibes. Join us, share ideas, and have fun.</p>
+          <p><a class="btn btn--pill" href="whitepaper.html">Read the Whitepaper</a></p>
         </div>
         <div class="col">
           <h3>Quick Links</h3>
@@ -96,21 +96,55 @@
         </div>
       </div>
     </section>
+
+    <section id="roadmap" class="section">
+      <div class="container">
+        <h3 class="section-title">Roadmap</h3>
+        <div class="cards">
+          <div class="card">
+            <div class="k">Phase 1 — Launch</div>
+            <div class="v">Website live, DEX listing, basic socials, community setup.</div>
+          </div>
+          <div class="card">
+            <div class="k">Phase 2 — Growth</div>
+            <div class="v">Listings on trackers (DexTools, CG/CMC submission), giveaways, partnerships.</div>
+          </div>
+          <div class="card">
+            <div class="k">Phase 3 — Utility & Fun</div>
+            <div class="v">Mini dApps, community contests, merch, more integrations.</div>
+          </div>
+          <div class="card">
+            <div class="k">Phase 4 — Governance</div>
+            <div class="v">Community votes for next steps. Fully transparent direction.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <div class="container">
+        <h3 class="section-title">FAQ</h3>
+        <div class="faq">
+          <details>
+            <summary>Is PoorCoin financial advice?</summary>
+            <p>No. PoorCoin is a meme/community project. Always DYOR and never invest more than you can afford to lose.</p>
+          </details>
+          <details>
+            <summary>Which network?</summary>
+            <p>BNB Smart Chain (BEP-20). Add the contract address above to your wallet to see POOR.</p>
+          </details>
+          <details>
+            <summary>Where do I trade?</summary>
+            <p>On PancakeSwap via the “Buy / Trade” buttons on this site.</p>
+          </details>
+          <details>
+            <summary>How do I get support?</summary>
+            <p>Join our Telegram — the community is friendly and helpful.</p>
+          </details>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <small>© 2025 PoorCoin — Built by the community</small>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById('copyBtn').addEventListener('click', () => {
-      const txt = document.getElementById('ca').textContent.trim();
-      navigator.clipboard.writeText(txt).then(() => {
-        alert('Contract address copied:\\n' + txt);
-      });
-    });
-  </script>
-</body>
-</html>
+    <div class="container foote
