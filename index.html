@@ -1,157 +1,133 @@
 <!doctype html>
-<html lang="en">
+<html lang="bg">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PoorCoin (POOR) — Official Website</title>
-  <link rel="icon" href="PoorCoin.png" />
-  <link rel="stylesheet" href="style.css" />
+  <title>PoorCoin (POOR) — Official</title>
+  <meta name="description" content="PoorCoin (POOR) — общностен мем токен на BNB Smart Chain (BEP-20). Прозрачно, честно и забавно.">
+  <link rel="icon" href="PoorCoin.png">
+  <!-- ако имаш отделен style.css, остави реда отдолу; иначе може да махнеш -->
+  <link rel="stylesheet" href="style.css">
   <style>
-    /* малко гаранционен стил, ако нещо липсва в style.css */
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;margin:0;background:#f7faf7;color:#0f172a}
-    .wrap{max-width:1100px;margin:0 auto;padding:20px}
-    header,.hero,.grid{display:flex;gap:16px}
-    header{align-items:center;justify-content:space-between;padding:14px 20px;background:#ffffffa6;backdrop-filter:saturate(150%) blur(6px);position:sticky;top:0;border-bottom:1px solid #e5e7eb}
-    nav a{margin-left:14px;text-decoration:none;color:#0ea5e9}
-    .brand{display:flex;align-items:center;gap:10px}
-    .brand img{width:38px;height:38px;border-radius:8px}
-    .btn{display:inline-block;padding:10px 14px;border-radius:10px;border:1px solid #16a34a;background:#22c55e;color:#fff;text-decoration:none;font-weight:600}
-    .btn.ghost{background:#fff;color:#111;border-color:#cbd5e1}
-    .hero{align-items:center;justify-content:space-between;margin-top:18px;flex-wrap:wrap}
-    .hero h1{font-size:32px;margin:8px 0}
-    .card{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:14px}
-    .grid{flex-wrap:wrap}
-    .grid .card{flex:1 1 320px}
-    ul.stats{list-style:none;padding:0;margin:0}
-    ul.stats li{padding:6px 0;border-bottom:1px dashed #e5e7eb}
-    footer{margin:40px 0 24px;text-align:center;color:#64748b}
-    .badges a{margin-right:8px}
-    .logo-big{width:100%;max-width:420px;border-radius:14px;border:1px solid #e5e7eb;background:#fff}
+    /* Минимални стилове за безопасност, ако style.css липсва/се счупи */
+    :root{--bg:#f6f9f6;--card:#ffffff;--muted:#6b7280;--text:#111827;--accent:#16a34a}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial}
+    .wrap{max-width:1100px;margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;gap:14px}
+    header img{width:40px;height:40px;border-radius:50%}
+    nav a{margin:0 8px;color:var(--muted);text-decoration:none}
+    nav a:hover{color:var(--text)}
+    h1{font-size:28px;margin:16px 0}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .card{background:var(--card);border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.06);padding:16px}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:16px;align-items:stretch}
+    .hero h2{font-size:24px;margin:0 0 8px}
+    .badge{display:inline-block;padding:4px 10px;border-radius:999px;background:#e9fbe9;color:#065f46;font-size:12px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;border:1px solid #d1d5db;text-decoration:none;color:var(--text);background:#fff}
+    .btn.primary{background:#22c55e;border-color:#16a34a;color:#fff;font-weight:600}
+    .btn.ghost{background:#fff;border-color:#cbd5e1;color:#111}
+    .btn.tiny{padding:6px 10px;font-size:13px;border-radius:8px}
+    .cols{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+    .pill{background:#eef6ee;color:#065f46;border-radius:10px;padding:6px 10px;font-size:13px;display:inline-block}
+    .list{padding:0;margin:0;list-style:none}
+    .list li{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px dashed #e5e7eb}
+    .muted{color:var(--muted);font-size:14px}
+    footer{margin-top:28px;padding:12px 0;color:var(--muted)}
+    .logoCard img{width:100%;height:auto;border-radius:12px;display:block}
+    @media (max-width:960px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
+  <div class="wrap">
+    <!-- HEADER -->
+    <header>
+      <img src="PoorCoin.png" alt="PoorCoin Logo">
+      <div>
+        <div class="badge">BNB Smart Chain (BEP-20)</div>
+        <h1 style="margin:6px 0 0;">PoorCoin (POOR)</h1>
+      </div>
+      <nav style="margin-left:auto">
+        <a href="#about">About</a>
+        <a href="#tokenomics">Tokenomics</a>
+        <a href="whitepaper.html">Whitepaper</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="faq.html">FAQ</a>
+        <a class="btn tiny primary" href="#" id="buyTop">Buy</a>
+      </nav>
+    </header>
 
-  <header>
-    <div class="brand">
-      <img src="PoorCoin.png" alt="PoorCoin Logo" />
-      <strong>PoorCoin (POOR)</strong>
-    </div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#tokenomics">Tokenomics</a>
-      <a href="whitepaper.html">Whitepaper</a>
-      <a href="roadmap.html">Roadmap</a>
-      <a href="faq.html">FAQ</a>
-    </nav>
-  </header>
-
-  <main class="wrap">
     <!-- HERO -->
-    <section class="hero">
-      <div class="card" style="flex:1 1 460px">
-        <h1>Built by and for the community <span style="color:#16a34a">on BNB Smart Chain</span></h1>
-        <p>PoorCoin (POOR) е децентрализиран meme token, роден от общността. Държим на прозрачност, fair play и забавление докато експериментираме и растем.</p>
-        <div class="badges">
-          <a class="btn" id="buyTop" target="_blank">Buy on PancakeSwap</a>
-          <a class="btn ghost" id="dexTop" target="_blank">View on DEXTools</a>
-        </div>
-      </div>
-      <img class="logo-big" src="PoorCoin.png" alt="PoorCoin" />
-    </section>
-
-    <!-- CARDS -->
-    <section class="grid" style="margin-top:18px">
-      <!-- Tokenomics -->
-      <div class="card" id="tokenomics">
-        <h3>Tokenomics</h3>
-        <ul class="stats">
-          <li>Chain: <strong>BNB Smart Chain (BEP-20)</strong></li>
-          <li>Ticker: <strong>POOR</strong></li>
-          <li>Total supply: <strong>1,000,000,000 POOR</strong></li>
-          <li>Liquidity (est): <strong>12,000,000 POOR + 0.011 BNB</strong></li>
-          <li>In circulation (wallet): <strong>~695,089,465 POOR</strong></li>
-        </ul>
-      </div>
-
-      <!-- Live stats (динамични) -->
+    <section class="hero" id="about" style="margin-top:16px;">
       <div class="card">
-        <h3>Live stats</h3>
-        <ul class="stats">
-          <li>Price (USD): <strong id="priceUsd">—</strong></li>
-          <li>Price (BNB): <strong id="priceBnb">—</strong></li>
-          <li>Market Cap (est): <strong id="mcap">—</strong></li>
-          <li>Holders: <strong id="holders">—</strong></li>
-        </ul>
-        <p class="muted" style="color:#64748b;font-size:14px;margin-top:8px">
-          Tip: винаги проверявай адреса в BscScan преди търговия.
+        <h2>Built by and for the community</h2>
+        <p class="muted" style="max-width:58ch">
+          PoorCoin (POOR) е децентрализиран meme токен, създаден от и за общността.
+          Държим на прозрачност, честност и забава—докато експериментираме, учим и растем.
         </p>
-        <div class="badges">
-          <button id="copyBtn" class="btn ghost" type="button">Copy</button>
-          <a id="bscscanLink" class="btn ghost" target="_blank">BscScan</a>
-          <button id="mmBtn" class="btn ghost" type="button">Add to MetaMask</button>
+        <div class="cols" style="margin:8px 0 14px">
+          <span class="pill">Chain: BNB Smart Chain</span>
+          <span class="pill">Ticker: POOR</span>
+          <span class="pill">Total supply: 1,000,000,000</span>
         </div>
-        <div style="margin-top:10px;font-family:monospace">
-          Contract (BSC): <span id="contractText" style="user-select:all"></span>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <a id="pancBtn1" class="btn primary" href="#" target="_blank" rel="noopener">Buy on PancakeSwap</a>
+          <a id="chartLink" class="btn ghost" href="#" target="_blank" rel="noopener">View chart</a>
         </div>
       </div>
 
-      <!-- Quick links -->
-      <aside class="card">
-        <h3>Quick links</h3>
-        <div class="badges" style="display:flex;flex-wrap:wrap;gap:8px">
-          <a class="btn ghost" href="https://t.me/poorcoin_bsc" target="_blank">Telegram</a>
-          <a class="btn ghost" href="https://x.com/SeeeskoTodorov" target="_blank">X (Twitter)</a>
-          <a class="btn ghost" id="pancBtn1" target="_blank">PancakeSwap</a>
-          <a class="btn ghost" id="dexBtn1" target="_blank">DEXTools</a>
+      <div class="card logoCard">
+        <img src="PoorCoin.png" alt="PoorCoin">
+      </div>
+    </section>
+
+    <!-- GRID: tokenomics + live + links -->
+    <section class="grid" style="margin-top:16px">
+      <!-- TOKENOMICS -->
+      <div class="card" id="tokenomics">
+        <h3 style="margin-top:0">Tokenomics</h3>
+        <ul class="list">
+          <li><span class="muted">Total supply</span> <strong>1,000,000,000 POOR</strong></li>
+          <li><span class="muted">In circulation (wallet)</span> <strong>~695,089,465 POOR</strong></li>
+          <li><span class="muted">Liquidity (est)</span> <strong>12,000,000 POOR + 0.011 BNB</strong></li>
+          <li><span class="muted">Chain</span> <strong>BNB Smart Chain (BEP-20)</strong></li>
+          <li><span class="muted">Ticker</span> <strong>POOR</strong></li>
+        </ul>
+      </div>
+
+      <!-- LIVE STATS -->
+      <div class="card">
+        <h3 style="margin-top:0">Live stats</h3>
+        <ul class="list">
+          <li><span class="muted">Price (USD)</span> <strong id="priceUsd">—</strong></li>
+          <li><span class="muted">Price (BNB)</span> <strong id="priceBnb">—</strong></li>
+          <li><span class="muted">Market Cap (est)</span> <strong id="mcap">—</strong></li>
+        </ul>
+        <p class="muted" style="margin-top:8px">Данните са от DexScreener и се обновяват при зареждане.</p>
+      </div>
+
+      <!-- QUICK LINKS -->
+      <div class="card">
+        <h3 style="margin-top:0">Quick Links</h3>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px">
+          <a class="btn tiny" href="https://t.me/poorcoin_bsc" target="_blank" rel="noopener">Telegram</a>
+          <a class="btn tiny" href="https://x.com/SeeeskoTodorov" target="_blank" rel="noopener">X (Twitter)</a>
+          <a id="pancBtn2" class="btn tiny" href="#" target="_blank" rel="noopener">PancakeSwap</a>
+          <a id="dextBtn" class="btn tiny" href="#" target="_blank" rel="noopener">DEXTools</a>
+          <a id="bscscanLink" class="btn tiny" href="#" target="_blank" rel="noopener">BscScan</a>
         </div>
-      </aside>
-    </section>
 
-    <section id="about" class="card" style="margin-top:18px">
-      <h3>About PoorCoin</h3>
-      <p>Прост, общностен meme токен. Няма обещания — само честна игра: <em>0% buy/sell taxes</em>, токенът е заключен в liquidity, договорът е проверим. Експериментираме, учим и се забавляваме.</p>
-    </section>
+        <div class="card" style="background:#f8faf8;border:1px dashed #d1d5db">
+          <div class="muted" style="font-size:13px;margin-bottom:6px">Contract (BSC)</div>
+          <code id="contractText" style="display:block;word-break:break-all">0x4B3336AABBb05759a302a588210D56F6eB6Adc281</code>
+          <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">
+            <button id="copyBtn" class="btn tiny">Copy</button>
+            <a id="bscscanBtn" class="btn tiny ghost" href="#" target="_blank" rel="noopener">View on BscScan</a>
+            <button id="mmBtn" class="btn tiny ghost">Add to MetaMask</button>
+          </div>
+          <p class="muted" style="margin:8px 0 0;font-size:12px">
+            Винаги проверявай адреса в BscScan преди каквато и да е търговия.
+          </p>
+        </div>
+      </div>
 
-    <div style="text-align:right;margin-top:14px;">
-      <a class="btn" id="buyBottom" target="_blank">Buy</a>
-    </div>
-  </main>
-
-  <footer>
-    <p>© 2025 PoorCoin · Built by the community</p>
-  </footer>
-
-  <!-- === динамичен скрипт за цени === -->
-  <script>
-    // ====== EDIT ТУК (ако смениш адрес или циркулация) ======
-    const CONTRACT = "0x4B3336AABB0B57593a02a588210d56Fe0E6adC281";
-    const CIRCULATING = 695_089_465;     // ≈ циркулиращо количество POOR
-    const BSC_SCAN_KEY = "";             // по желание: сложи твоя BscScan API key
-
-    // ----- DOM елементи
-    const $usd = document.getElementById('priceUsd');
-    const $bnb = document.getElementById('priceBnb');
-    const $mcap = document.getElementById('mcap');
-    const $holders = document.getElementById('holders');
-    const $copy = document.getElementById('copyBtn');
-    const $mm = document.getElementById('mmBtn');
-    const $scan = document.getElementById('bscscanLink');
-    const $ct = document.getElementById('contractText');
-    const $p1 = document.getElementById('pancBtn1');
-    const $d1 = document.getElementById('dexBtn1');
-    const $buyTop = document.getElementById('buyTop');
-    const $dexTop = document.getElementById('dexTop');
-    const $buyBottom = document.getElementById('buyBottom');
-
-    // ----- линкове (не пипай)
-    const PANCAKE = `https://pancakeswap.finance/swap?outputCurrency=${CONTRACT}`;
-    const DEXTOOLS = `https://www.dextools.io/app/en/bnb/token/${CONTRACT}`;
-    const BSCSCAN = `https://bscscan.com/token/${CONTRACT}`;
-
-    [$p1,$buyTop,$buyBottom].forEach(a => a && (a.href = PANCAKE));
-    [$d1,$dexTop].forEach(a => a && (a.href = DEXTOOLS));
-    $scan.href = BSCSCAN;
-    $ct.textContent = CONTRACT;
-
-    // ----- помощни
-    co
+      <!-- ABOUT CARD -->
