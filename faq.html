@@ -1,15 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PoorCoin — FAQ</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .faq-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    .faq-item {
+      margin-bottom: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      overflow: hidden;
+    }
+    .faq-question {
+      width: 100%;
+      text-align: left;
+      background: #f5f5f5;
+      color: #222;
+      padding: 15px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      outline: none;
+    }
+    .faq-answer {
+      display: none;
+      padding: 15px;
+      background: #fff;
+      font-size: 15px;
+      color: #333;
+    }
+    .faq-question.active {
+      background: #28a745;
+      color: #fff;
+    }
+  </style>
 </head>
 <body>
   <header>
     <img src="PoorCoin.png" alt="PoorCoin Logo" class="logo">
-    <h1>PoorCoin (POOR) — FAQ</h1>
+    <h1>PoorCoin (POOR) — Често задавани въпроси</h1>
     <nav>
       <a href="index.html">About</a>
       <a href="roadmap.html">Roadmap</a>
@@ -20,27 +56,47 @@
   </header>
 
   <main>
-    <section class="faq">
-      <h2>Frequently Asked Questions</h2>
-      <h3>1. What is PoorCoin?</h3>
-      <p>PoorCoin (POOR) is a community-driven meme token on the BNB Smart Chain.</p>
-
-      <h3>2. How can I buy POOR?</h3>
-      <p>You can trade POOR on PancakeSwap using the official contract address.</p>
-
-      <h3>3. What is the total supply?</h3>
-      <p>The total supply is <strong>1,000,000,000 POOR</strong>.</p>
-
-      <h3>4. Is liquidity locked?</h3>
-      <p>Liquidity was added on PancakeSwap. Updates about locking will be shared in the Telegram group.</p>
-
-      <h3>5. Where can I follow updates?</h3>
-      <p>Join our <a href="https://t.me/poorcoin_bsc" target="_blank">Telegram channel</a> and follow us on Twitter/X.</p>
-    </section>
+    <div class="faq-container">
+      <div class="faq-item">
+        <button class="faq-question">1. Какво е PoorCoin?</button>
+        <div class="faq-answer">
+          <p>PoorCoin (POOR) е децентрализиран meme токен, създаден за общността на BNB Smart Chain.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">2. Как да купя PoorCoin?</button>
+        <div class="faq-answer">
+          <p>Може да купите POOR директно чрез PancakeSwap, като използвате официалния контракт адрес.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">3. Колко е общото предлагане?</button>
+        <div class="faq-answer">
+          <p>Общото предлагане е 1,000,000,000 POOR.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">4. Има ли екип зад PoorCoin?</button>
+        <div class="faq-answer">
+          <p>PoorCoin е community-driven проект. Всичко се движи от общността.</p>
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer>
     <p>© 2025 PoorCoin | Built by the community</p>
   </footer>
+
+  <script>
+    const questions = document.querySelectorAll(".faq-question");
+    questions.forEach(q => {
+      q.addEventListener("click", () => {
+        q.classList.toggle("active");
+        const answer = q.nextElementSibling;
+        answer.style.display = answer.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
 </body>
 </html>
