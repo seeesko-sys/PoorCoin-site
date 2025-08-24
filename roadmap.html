@@ -1,39 +1,131 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PoorCoin — Roadmap</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="PoorCoin.png" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <img src="PoorCoin.png" alt="PoorCoin Logo" class="logo">
-    <h1>PoorCoin (POOR) — Roadmap</h1>
-    <nav>
-      <a href="index.html">About</a>
-      <a href="roadmap.html">Roadmap</a>
-      <a href="faq.html">FAQ</a>
+<header class="site-header">
+  <div class="container header-bar">
+    <a class="brand" href="index.html">
+      <img src="PoorCoin.png" alt="PoorCoin Logo" class="brand-logo" />
+      <span>PoorCoin (POOR)</span>
+    </a>
+    <nav class="nav">
+      <a href="index.html#about">About</a>
+      <a href="index.html#tokenomics">Tokenomics</a>
       <a href="whitepaper.html">Whitepaper</a>
-      <a href="https://pancakeswap.finance/swap?outputCurrency=0x4B336AABbB057503aD2a588201D56F0e6EadC281" target="_blank" class="btn">Buy</a>
+      <a class="active" href="roadmap.html">Roadmap</a>
+      <a href="faq.html">FAQ</a>
+      <a class="btn primary" target="_blank"
+         href="https://pancakeswap.finance/swap?outputCurrency=0x4B3336AABBbB057593a02a588210D56F6e6adc281">Buy</a>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <main>
-    <section class="roadmap">
-      <h2>Our Roadmap</h2>
-      <ul>
-        <li><strong>Phase 1:</strong> Token creation, website launch, initial liquidity on PancakeSwap.</li>
-        <li><strong>Phase 2:</strong> Growing the community — Telegram, Twitter/X, and marketing push.</li>
-        <li><strong>Phase 3:</strong> Apply for CoinGecko & CoinMarketCap listings.</li>
-        <li><strong>Phase 4:</strong> Partnerships, more liquidity, and first exchange listings.</li>
-        <li><strong>Phase 5:</strong> Ecosystem expansion and community-driven utilities.</li>
-      </ul>
-    </section>
-  </main>
+<main class="container">
+  <h1 class="page-title">Roadmap</h1>
+  <p class="muted" style="margin-top:-8px">
+    Built by and for the community. Milestones are indicative and may shift as the community votes.
+  </p>
 
-  <footer>
-    <p>© 2025 PoorCoin | Built by the community</p>
-  </footer>
+  <!-- timeline -->
+  <section class="card" style="padding:24px">
+    <ol class="timeline">
+      <li class="t-item done">
+        <div class="t-dot"></div>
+        <div class="t-content">
+          <h3>Phase 0 — Launch</h3>
+          <ul class="bulleted">
+            <li>Token deployed on <span class="pill">BNB Smart Chain (BEP-20)</span></li>
+            <li>Initial supply: <strong>1,000,000,000 POOR</strong></li>
+            <li>Website + GitHub Pages live (<span class="pill soft">poorcoin.net</span>)</li>
+            <li>Socials: <a href="https://t.me/poorcoin_bsc" target="_blank">Telegram</a>,
+                <a href="https://x.com/SeeeskoTodorov" target="_blank">X (Twitter)</a></li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="t-item done">
+        <div class="t-dot"></div>
+        <div class="t-content">
+          <h3>Phase 1 — Liquidity & Basics</h3>
+          <ul class="bulleted">
+            <li>Liquidity on PancakeSwap (<span class="pill">~12,000,000 POOR + 0.011 BNB (est.)</span>)</li>
+            <li>Basic analytics: <a target="_blank" href="https://bscscan.com/token/0x4B3336AABBbB057593a02a588210D56F6e6adc281">BscScan</a>,
+                <a target="_blank" href="https://www.dextools.io/app/en/bnb">DEXTools</a></li>
+            <li>Community FAQ & Whitepaper (lite)</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="t-item">
+        <div class="t-dot"></div>
+        <div class="t-content">
+          <h3>Phase 2 — Community Growth</h3>
+          <ul class="bulleted">
+            <li>Community contests & memes</li>
+            <li>Organic KOL outreach & mini-campaigns</li>
+            <li>Website improvements, multi-lang pages</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="t-item">
+        <div class="t-dot"></div>
+        <div class="t-content">
+          <h3>Phase 3 — Listings & Utilities</h3>
+          <ul class="bulleted">
+            <li>Apply for trackers & listings (CoinGecko/CoinMarketCap)</li>
+            <li>Simple utilities (bots, mini-apps, holders perks)</li>
+            <li>Community treasury experiments</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="t-item">
+        <div class="t-dot"></div>
+        <div class="t-content">
+          <h3>Phase 4 — Expansion</h3>
+          <ul class="bulleted">
+            <li>Partnerships & cross-community events</li>
+            <li>Further liquidity & marketing as voted by the community</li>
+            <li>Iterate the roadmap publicly</li>
+          </ul>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="card" style="margin-top:16px">
+    <div class="grid two">
+      <div>
+        <h3>Official Links</h3>
+        <div class="chips">
+          <a class="pill" target="_blank"
+             href="https://pancakeswap.finance/swap?outputCurrency=0x4B3336AABBbB057593a02a588210D56F6e6adc281">PancakeSwap</a>
+          <a class="pill" target="_blank" href="https://www.dextools.io/app/en/bnb">DEXTools</a>
+          <a class="pill" target="_blank" href="https://bscscan.com/token/0x4B3336AABBbB057593a02a588210D56F6e6adc281">BscScan</a>
+          <a class="pill" target="_blank" href="https://t.me/poorcoin_bsc">Telegram</a>
+          <a class="pill" target="_blank" href="https://x.com/SeeeskoTodorov">X (Twitter)</a>
+        </div>
+      </div>
+      <div>
+        <h3>Contract</h3>
+        <code class="code-block">0x4B3336AABBbB057593a02a588210D56F6e6adc281</code>
+        <p class="muted">Always verify on BscScan before trading.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 PoorCoin · Built by the community</p>
+  </div>
+</footer>
 </body>
 </html>
