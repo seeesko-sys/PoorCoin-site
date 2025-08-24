@@ -1,41 +1,61 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>PoorCoin — Whitepaper</title>
-  <link rel="icon" href="PoorCoin.png">
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="PoorCoin (POOR) whitepaper: overview, tokenomics, roadmap, and disclaimers."/>
+  <link rel="icon" href="PoorCoin.png"/>
   <style>
-    /* малко доп. стил за четимост на страницата */
-    .container {max-width: 980px; margin: 40px auto; padding: 0 16px;}
-    .wp-card {background:#fff; border-radius:16px; padding:24px; box-shadow:0 6px 18px rgba(0,0,0,.06); margin:18px 0;}
-    .wp-card h2 {margin-top:0}
-    .badge {display:inline-block; padding:6px 10px; border-radius:999px; font-size:.9rem; background:#e8f7ea; color:#1f7a2e; margin-right:8px}
-    .pill {display:inline-block; padding:6px 10px; border-radius:8px; background:#f4f6f8; margin:4px 6px 0 0; font-size:.9rem}
-    .grid-2 {display:grid; grid-template-columns: 1fr 1fr; gap:16px}
-    @media (max-width: 800px){ .grid-2 {grid-template-columns:1fr} }
-    .btns {display:flex; flex-wrap:wrap; gap:10px; margin-top:10px}
-    .btn {background:#22c55e; color:#fff; padding:10px 14px; border-radius:10px; text-decoration:none; font-weight:600; display:inline-block}
-    .btn.secondary {background:#111827}
-    header {display:flex; align-items:center; gap:14px; margin:18px 0 8px}
-    header img {width:44px; height:44px; border-radius:8px}
-    nav a {margin-right:12px; color:#111827; text-decoration:none; font-weight:600}
-    .muted {color:#6b7280}
-    .small {font-size:.95rem; line-height:1.5}
-    .code {font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace; background:#f7f7f9; border:1px solid #eee; padding:8px 10px; border-radius:8px}
-    .list {margin:.3rem 0 .9rem 1.25rem}
+    :root{--ink:#0b1220;--muted:#5f6b7a;--bd:#e7eef2;--card:#fff;--bg:#f6faf7;--brand:#16a34a}
+    *{box-sizing:border-box} html,body{margin:0}
+    body{font:16px/1.7 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+    .container{max-width:960px;margin:0 auto;padding:24px}
+    header{display:flex;gap:14px;align-items:center;margin-bottom:12px}
+    header img{width:44px;height:44px;border-radius:10px}
+    nav a{margin-right:12px;text-decoration:none;color:var(--ink);font-weight:700;padding:6px 10px;border-radius:999px;background:#fff;border:1px solid var(--bd)}
+    nav a:hover{box-shadow:0 0 0 6px rgba(34,197,94,.15)}
+    h1{margin:.2rem 0 0}
+    .muted{color:var(--muted)}
+    .card{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:18px;box-shadow:0 10px 26px rgba(2,8,20,.05);margin:16px 0}
+    h2{margin:0 0 8px}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    @media(max-width:820px){.grid2{grid-template-columns:1fr}}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:#ecfdf5;color:#065f46;font-weight:800;font-size:12px;margin-right:8px}
+    .btn{display:inline-block;background:#16a34a;color:#fff;text-decoration:none;font-weight:800;border-radius:12px;padding:10px 14px}
+    .btn.dark{background:#0f172a}
+    ul,ol{margin:.3rem 0 .6rem 1.2rem}
+    code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:#0f172a;color:#e2e8f0;border-radius:8px;padding:6px 8px}
+    footer{margin:20px 0 10px;text-align:center;color:var(--muted);font-size:14px}
   </style>
 </head>
 <body>
-
   <div class="container">
     <header>
-      <img src="PoorCoin.png" alt="PoorCoin Logo">
+      <img src="PoorCoin.png" alt="PoorCoin Logo"/>
       <div>
-        <nav>
-          <a href="index.html">← Back to site</a>
-        </nav>
-        <h1 style="margin:.2rem 0 0">PoorCoin — Whitepaper</h1>
-        <div class="muted">Learn the basics, goals and tokenomics of POOR.</div>
-      </div
+        <nav><a href="index.html">← Back to site</a></nav>
+        <h1>PoorCoin — Whitepaper</h1>
+        <div class="muted">The community-driven meme token on BNB Smart Chain.</div>
+      </div>
+    </header>
+
+    <section class="card">
+      <h2>Overview</h2>
+      <p><b>PoorCoin (POOR)</b> is a simple, community-driven meme token on the <span class="pill">BNB Smart Chain (BEP-20)</span>.
+         The goal is to keep things fun, transparent and fair while the community experiments and grows together.</p>
+      <p><span class="pill">Ticker: POOR</span> <span class="pill">Total supply: 1,000,000,000</span> <span class="pill">Chain: BSC</span></p>
+      <p class="muted">Official links:</p>
+      <p class="card" style="margin:10px 0 0">
+        <a class="btn" href="https://pancakeswap.finance/swap?outputCurrency=0x4B336AABbB057503aD2a588201D56F0e6EadC281" target="_blank" rel="noopener">Buy on PancakeSwap</a>
+        &nbsp; <a class="btn dark" href="https://www.geckoterminal.com/bsc/pools/0xec7e56657bb005d3e10add91f72459fd3bbee2d1" target="_blank" rel="noopener">Live Chart</a>
+        &nbsp; <a class="btn dark" href="https://t.me/poorcoin_bsc" target="_blank" rel="noopener">Telegram</a>
+        &nbsp; <a class="btn dark" href="https://x.com/SeeeskoTodorov" target="_blank" rel="noopener">X (Twitter)</a>
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Smart Contract</h2>
+      <p>Standard BEP-20 token. Always verify the address on BscScan before any transaction.</p>
+      <p>Contract (BSC): <code>0x4B336AABbB057503aD2a588201D56F0e6EadC281</code></p>
+      <p><a class="btn" href="https://bscscan.com/token/0x4B336AABbB
