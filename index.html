@@ -5,22 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PoorCoin (POOR) — Official Website</title>
   <meta name="description" content="PoorCoin (POOR) is a community-driven meme token on BNB Smart Chain. Trade on PancakeSwap, read the whitepaper, and join the community." />
+
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Open Graph / Twitter for nicer shares -->
+  <!-- Open Graph / Twitter -->
   <meta property="og:title" content="PoorCoin (POOR) — Official Website" />
   <meta property="og:description" content="Community-driven token on BNB Smart Chain. Fair, transparent, and fun." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://poorcoin.net/" />
-  <meta property="og:image" content="https://gateway.pinata.cloud/ipfs/bafybeihhtjwdnldwmn6u4yjhfh3a7owqslzgxb7c7znpg5ww4b3yky7e5e/poorcoin-logo.png" />
+  <meta property="og:image" content="https://poorcoin.net/assets/poorcoin-logo.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <link rel="icon" href="https://gateway.pinata.cloud/ipfs/bafybeihhtjwdnldwmn6u4yjhfh3a7owqslzgxb7c7znpg5ww4b3yky7e5e/poorcoin-logo.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/poorcoin-logo.png" />
+  <link rel="apple-touch-icon" href="/assets/poorcoin-logo.png" />
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
-        <img class="logo" src="https://gateway.pinata.cloud/ipfs/bafybeihhtjwdnldwmn6u4yjhfh3a7owqslzgxb7c7znpg5ww4b3yky7e5e/poorcoin-logo.png" alt="PoorCoin Logo" />
+        <img class="logo" src="/assets/poorcoin-logo.png" alt="PoorCoin Logo" />
         <div>
           <h1>PoorCoin (POOR)</h1>
           <p class="tagline">The community-driven token on BNB Smart Chain</p>
@@ -101,22 +105,10 @@
       <div class="container">
         <h3 class="section-title">Roadmap</h3>
         <div class="cards">
-          <div class="card">
-            <div class="k">Phase 1 — Launch</div>
-            <div class="v">Website live, DEX listing, basic socials, community setup.</div>
-          </div>
-          <div class="card">
-            <div class="k">Phase 2 — Growth</div>
-            <div class="v">Listings on trackers (DexTools, CG/CMC submission), giveaways, partnerships.</div>
-          </div>
-          <div class="card">
-            <div class="k">Phase 3 — Utility & Fun</div>
-            <div class="v">Mini dApps, community contests, merch, more integrations.</div>
-          </div>
-          <div class="card">
-            <div class="k">Phase 4 — Governance</div>
-            <div class="v">Community votes for next steps. Fully transparent direction.</div>
-          </div>
+          <div class="card"><div class="k">Phase 1 — Launch</div><div class="v">Website live, DEX listing, basic socials, community setup.</div></div>
+          <div class="card"><div class="k">Phase 2 — Growth</div><div class="v">Listings on trackers (DexTools, CG/CMC submission), giveaways, partnerships.</div></div>
+          <div class="card"><div class="k">Phase 3 — Utility & Fun</div><div class="v">Mini dApps, community contests, merch, more integrations.</div></div>
+          <div class="card"><div class="k">Phase 4 — Governance</div><div class="v">Community votes for next steps. Fully transparent direction.</div></div>
         </div>
       </div>
     </section>
@@ -147,4 +139,10 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container foote
+    <div class="container footer-inner">
+      <small>© 2025 PoorCoin — Built by the community • <a href="whitepaper.html">Whitepaper</a> • <a target="_blank" href="https://bscscan.com/token/0x4B336AABbB057503aD2a588201D56F0e6EadC281">BscScan</a></small>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('copyBtn').addEventListener(
