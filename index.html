@@ -1,45 +1,149 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PoorCoin (POOR) — Official Website</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="PoorCoin (POOR) — a community-driven meme token on BNB Smart Chain. Fair, transparent and fun." />
+  <link rel="icon" href="PoorCoin.png" />
+  <meta property="og:title" content="PoorCoin (POOR) — Official Website" />
+  <meta property="og:description" content="Community-driven meme token on BNB Smart Chain." />
+  <meta property="og:image" content="https://poorcoin.net/PoorCoin.png" />
+  <meta name="theme-color" content="#15a34a" />
+  <style>
+    :root{
+      --bg: #f6faf7;
+      --card: #ffffff;
+      --text:#0b1220;
+      --muted:#5f6b7a;
+      --brand:#16a34a;
+      --brand-2:#22c55e;
+      --ring: rgba(34,197,94,.25);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol";
+      color:var(--text);
+      background:
+        radial-gradient(1000px 600px at 15% -10%, #d1fae5 0, rgba(209,250,229,0) 60%),
+        radial-gradient(900px 600px at 110% 10%, #e0f2fe 0, rgba(224,242,254,0) 60%),
+        var(--bg);
+    }
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    header{
+      display:flex;align-items:center;gap:16px;justify-content:space-between;margin-bottom:16px
+    }
+    .brand{display:flex;align-items:center;gap:14px}
+    .brand img{width:44px;height:44px;border-radius:12px;box-shadow:0 6px 14px rgba(0,0,0,.08)}
+    h1{font-size: clamp(22px, 3.2vw, 34px);margin:0}
+    nav{display:flex;gap:10px;flex-wrap:wrap}
+    nav a{
+      text-decoration:none;background:var(--card);border:1px solid #e7eef2;
+      color:var(--text);padding:8px 12px;border-radius:999px;font-weight:600;
+    }
+    nav a:hover{box-shadow:0 0 0 6px var(--ring)}
+    .grid{display:grid;grid-template-columns:1.2fr 1fr;gap:18px}
+    @media (max-width:900px){ .grid{grid-template-columns:1fr} }
+    .card{
+      background:var(--card);border:1px solid #e7eef2;border-radius:18px;
+      padding:18px;box-shadow:0 10px 30px rgba(2,8,20,.04)
+    }
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:#ecfdf5;color:#065f46;font-weight:700;font-size:12px}
+    .muted{color:var(--muted)}
+    h2{margin:0 0 10px 0;font-size: clamp(18px,2.6vw,24px)}
+    .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+    @media (max-width:700px){ .stat-grid{grid-template-columns:1fr} }
+    .stat{background:#f8fafc;border:1px solid #e7eef2;border-radius:14px;padding:14px}
+    .stat .k{color:#0f172a;font-weight:800}
+    .btn{
+      appearance:none;border:0;border-radius:12px;padding:12px 16px;font-weight:800;
+      color:#fff;background:linear-gradient(180deg,var(--brand),var(--brand-2));
+      text-decoration:none;display:inline-flex;align-items:center;gap:10px;cursor:pointer
+    }
+    .btn.secondary{background:#0ea5e9}
+    .btn.ghost{color:#065f46;background:#ecfdf5}
+    .btn:focus-visible{outline:0;box-shadow:0 0 0 6px var(--ring)}
+    .stack{display:flex;flex-wrap:wrap;gap:10px}
+    .row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+    .kbd{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+      background:#0f172a;color:#e2e8f0;border-radius:8px;padding:8px 10px;font-weight:700}
+    footer{opacity:.8;margin-top:28px;font-size:14px}
+    .copy{cursor:pointer}
+  </style>
 </head>
 <body>
-  <header>
-    <img src="PoorCoin.png" alt="PoorCoin Logo" class="logo" width="120">
-    <h1>PoorCoin (POOR)</h1>
-    <p>The community-driven token on BNB Smart Chain</p>
-  </header>
+  <div class="container">
+    <!-- Top -->
+    <header>
+      <div class="brand">
+        <img src="PoorCoin.png" alt="PoorCoin Logo" />
+        <div>
+          <h1>PoorCoin <span class="muted">(POOR)</span></h1>
+          <div class="muted">The community-driven token on BNB Smart Chain</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#tokenomics">Tokenomics</a>
+        <a href="#links">Quick links</a>
+        <a href="whitepaper.html">Whitepaper</a>
+        <a class="btn" href="https://pancakeswap.finance/swap?outputCurrency=0x4B3B...C281" target="_blank" rel="noopener">Buy</a>
+      </nav>
+    </header>
 
-  <section id="about">
-    <h2>Built by and for the community</h2>
-    <p>PoorCoin (POOR) is a decentralized meme token created by and for the community. 
-       Our mission is to keep things fun, transparent, and fair while we experiment, learn, and grow together.</p>
-    <p><strong>Chain:</strong> BNB Smart Chain (BEP-20)<br>
-       <strong>Ticker:</strong> POOR<br>
-       <strong>Total Supply:</strong> 1,000,000,000 POOR</p>
-  </section>
+    <div class="grid">
+      <!-- LEFT: About + Tokenomics -->
+      <section class="card" id="about">
+        <span class="pill">Built by and for the community</span>
+        <h2 style="margin-top:10px">About PoorCoin</h2>
+        <p class="muted" style="line-height:1.6">
+          PoorCoin (POOR) is a decentralized meme token created by and for the community.
+          We keep things fun, transparent, and fair while we experiment, learn, and grow together.
+        </p>
+        <div class="row" style="margin-top:10px">
+          <span class="pill">Chain: BNB Smart Chain (BEP-20)</span>
+          <span class="pill">Ticker: <b>POOR</b></span>
+          <span class="pill">Total Supply: <b>1,000,000,000</b></span>
+        </div>
 
-  <section id="tokenomics">
-    <h2>Tokenomics</h2>
-    <div class="card">Total Supply: 1,000,000,000 POOR</div>
-    <div class="card">In Circulation: ~695,089,465 POOR</div>
-    <div class="card">Liquidity (est.): 12,000,000 POOR + 0.011 BNB</div>
-    <div class="card">Holders: Growing daily</div>
-  </section>
+        <h2 id="tokenomics" style="margin-top:18px">Tokenomics</h2>
+        <div class="stat-grid">
+          <div class="stat">
+            <div class="muted">Total supply</div>
+            <div class="k">1,000,000,000 POOR</div>
+          </div>
+          <div class="stat">
+            <div class="muted">In circulation (wallet)</div>
+            <div class="k">695,089,464.54846 POOR</div>
+          </div>
+          <div class="stat">
+            <div class="muted">Liquidity (est.)</div>
+            <div class="k">12,000,000 POOR + 0.011 BNB</div>
+          </div>
+        </div>
 
-  <section id="links">
-    <h2>Quick Links</h2>
-    <a href="https://t.me/yourtelegram" target="_blank">Telegram</a>
-    <a href="https://twitter.com/yourtwitter" target="_blank">Twitter/X</a>
-    <a href="https://pancakeswap.finance/swap?outputCurrency=0x4B336AABbB057503aD2a588201D56F0e6EadC281" target="_blank">Buy on PancakeSwap</a>
-    <a href="https://www.dextools.io/app/en/bnb/pair-explorer" target="_blank">View on DEXTools</a>
-  </section>
+        <div class="row" style="margin-top:16px">
+          <a class="btn" href="https://pancakeswap.finance/swap?outputCurrency=0x4B3B...C281" target="_blank" rel="noopener">Trade on PancakeSwap</a>
+          <a class="btn secondary" href="https://www.dextools.io/app/en/bnb/pair-explorer/0xEC7...E2D1" target="_blank" rel="noopener">View on DEXTools</a>
+        </div>
+      </section>
 
-  <footer>
-    <p>© 2025 PoorCoin | Built by the community</p>
-  </footer>
-</body>
-</html>
+      <!-- RIGHT: Quick links / Contract -->
+      <aside class="card" id="links">
+        <h2>Quick Links</h2>
+        <div class="stack" style="margin-top:12px">
+          <a class="btn ghost" href="https://t.me/yourtelegram" target="_blank" rel="noopener">Telegram</a>
+          <a class="btn ghost" href="https://twitter.com/yourtwitter" target="_blank" rel="noopener">Twitter/X</a>
+          <a class="btn ghost" href="https://www.dextools.io/app/en/bnb/pair-explorer/0xEC7...E2D1" target="_blank" rel="noopener">DEXTools</a>
+        </div>
+
+        <div style="margin-top:16px">
+          <div class="muted" style="margin-bottom:6px">Contract</div>
+          <div class="row">
+            <code id="contract" class="kbd">0x4B3B...C281</code>
+            <button class="btn" style="padding:10px 12px" id="copyBtn">Copy</button>
+          </div>
+          <div class="muted" style="margin-top:8px">
+            Always double-check the contract on BscScan before trading.
+          </di
