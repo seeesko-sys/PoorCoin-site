@@ -1,54 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PoorCoin — Whitepaper</title>
-  <meta name="description" content="PoorCoin (POOR) whitepaper." />
+  <link rel="icon" href="PoorCoin.png">
   <link rel="stylesheet" href="style.css" />
-
-  <meta property="og:title" content="PoorCoin — Whitepaper" />
-  <meta property="og:image" content="https://poorcoin.net/assets/poorcoin-logo.png" />
-
-  <link rel="icon" href="/assets/poorcoin-logo.png" />
-  <link rel="apple-touch-icon" href="/assets/poorcoin-logo.png" />
+  <style>
+    /* малко доп. стил за четимост на страницата */
+    .container {max-width: 980px; margin: 40px auto; padding: 0 16px;}
+    .wp-card {background:#fff; border-radius:16px; padding:24px; box-shadow:0 6px 18px rgba(0,0,0,.06); margin:18px 0;}
+    .wp-card h2 {margin-top:0}
+    .badge {display:inline-block; padding:6px 10px; border-radius:999px; font-size:.9rem; background:#e8f7ea; color:#1f7a2e; margin-right:8px}
+    .pill {display:inline-block; padding:6px 10px; border-radius:8px; background:#f4f6f8; margin:4px 6px 0 0; font-size:.9rem}
+    .grid-2 {display:grid; grid-template-columns: 1fr 1fr; gap:16px}
+    @media (max-width: 800px){ .grid-2 {grid-template-columns:1fr} }
+    .btns {display:flex; flex-wrap:wrap; gap:10px; margin-top:10px}
+    .btn {background:#22c55e; color:#fff; padding:10px 14px; border-radius:10px; text-decoration:none; font-weight:600; display:inline-block}
+    .btn.secondary {background:#111827}
+    header {display:flex; align-items:center; gap:14px; margin:18px 0 8px}
+    header img {width:44px; height:44px; border-radius:8px}
+    nav a {margin-right:12px; color:#111827; text-decoration:none; font-weight:600}
+    .muted {color:#6b7280}
+    .small {font-size:.95rem; line-height:1.5}
+    .code {font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace; background:#f7f7f9; border:1px solid #eee; padding:8px 10px; border-radius:8px}
+    .list {margin:.3rem 0 .9rem 1.25rem}
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <img class="logo" src="/assets/poorcoin-logo.png" alt="PoorCoin Logo" />
-        <div>
-          <h1>PoorCoin — Whitepaper</h1>
-          <p class="tagline">Learn the basics, goals and tokenomics</p>
-        </div>
-      </div>
-      <nav class="nav">
-        <a href="index.html#about">About</a>
-        <a href="index.html#tokenomics">Tokenomics</a>
-        <a href="index.html#roadmap">Roadmap</a>
-        <a href="index.html#faq">FAQ</a>
-        <a class="btn btn--primary" href="index.html">Back to site</a>
-      </nav>
-    </div>
-  </header>
 
-  <main class="section">
-    <div class="container">
-      <h3 class="section-title">PDF Viewer</h3>
-      <div class="card" style="padding:0; overflow:hidden">
-        <iframe src="whitepaper.pdf" title="PoorCoin Whitepaper" style="width:100%; height:72vh; border:0;"></iframe>
-      </div>
-      <p style="text-align:center; margin-top:10px">
-        If the viewer doesn't load, <a class="btn btn--pill" href="whitepaper.pdf" target="_blank">download the PDF</a>.
-      </p>
-    </div>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <small>© 2025 PoorCoin — Built by the community</small>
-    </div>
-  </footer>
-</body>
-</html>
+  <div class="container">
+    <header>
+      <img src="PoorCoin.png" alt="PoorCoin Logo">
+      <div>
+        <nav>
+          <a href="index.html">← Back to site</a>
+        </nav>
+        <h1 style="margin:.2rem 0 0">PoorCoin — Whitepaper</h1>
+        <div class="muted">Learn the basics, goals and tokenomics of POOR.</div>
+      </div
