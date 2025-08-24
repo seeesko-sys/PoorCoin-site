@@ -1,152 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PoorCoin (POOR) - Official Website</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9fafb;
-      color: #222;
-      text-align: center;
-    }
-    header {
-      background: #fff;
-      padding: 20px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    header img {
-      height: 60px;
-    }
-    h1 {
-      color: #1a8917;
-      margin: 10px 0 5px;
-    }
-    h2 {
-      margin-top: 30px;
-      color: #333;
-    }
-    p {
-      max-width: 600px;
-      margin: 10px auto;
-      line-height: 1.6;
-    }
-    .buttons {
-      margin: 20px;
-    }
-    .buttons a, button {
-      display: inline-block;
-      margin: 5px;
-      padding: 12px 20px;
-      background: #1a8917;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 6px;
-      transition: 0.2s;
-      border: none;
-      cursor: pointer;
-    }
-    .buttons a:hover, button:hover {
-      background: #146c12;
-    }
-    .grid {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin: 20px auto;
-      max-width: 800px;
-    }
-    .tile {
-      background: #fff;
-      border-radius: 8px;
-      padding: 20px;
-      width: 200px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    .tile .k {
-      font-weight: bold;
-      margin-bottom: 5px;
-      color: #444;
-    }
-    .tile .v {
-      font-size: 1.1em;
-      color: #1a8917;
-    }
-    footer {
-      background: #f1f1f1;
-      padding: 15px;
-      margin-top: 40px;
-      font-size: 14px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="PoorCoin (POOR) - community-driven meme token on BNB Smart Chain." />
 </head>
 <body>
-  <header>
-    <img src="https://gateway.pinata.cloud/ipfs/bafybeihhtjwdnldwmn6u4yjhfh3a7owqslzgxb7c7znpg5ww4b3yky7e5e/poorcoin-logo.png" alt="PoorCoin Logo">
-    <h1>PoorCoin (POOR)</h1>
-    <p>The community-driven token on BNB Smart Chain</p>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img class="logo" src="https://gateway.pinata.cloud/ipfs/bafybeihhtjwdnldwmn6u4yjhfh3a7owqslzgxb7c7znpg5ww4b3yky7e5e/poorcoin-logo.png" alt="PoorCoin Logo" />
+        <div>
+          <h1>PoorCoin (POOR)</h1>
+          <p class="tagline">The community-driven token on BNB Smart Chain</p>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#tokenomics">Tokenomics</a>
+        <a href="#contract">Contract</a>
+        <a class="btn btn--primary" target="_blank" href="https://pancakeswap.finance/swap?outputCurrency=0x4B336AABbB057503aD2a588201D56F0e6EadC281">Buy on PancakeSwap</a>
+      </nav>
+    </div>
   </header>
 
-  <section>
-    <h2>About PoorCoin</h2>
-    <p>PoorCoin (POOR) is a decentralized meme token built by and for the community. 
-       Our mission is to keep things fun, transparent, and fair while we experiment, learn, and grow together.</p>
-  </section>
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h2>Built by and for the community</h2>
+          <p>PoorCoin (POOR) is a decentralized meme token. We keep things fun, transparent, and fair while we experiment, learn, and grow together.</p>
+          <div class="badges">
+            <span class="badge">Chain: BNB Smart Chain (BEP-20)</span>
+            <span class="badge">Ticker: POOR</span>
+            <span class="badge">Supply: 1,000,000,000</span>
+          </div>
+          <div class="cta">
+            <a class="btn btn--primary" target="_blank" href="https://pancakeswap.finance/swap?outputCurrency=0x4B336AABbB057503aD2a588201D56F0e6EadC281">Trade on PancakeSwap</a>
+            <a class="btn btn--ghost" target="_blank" href="https://www.dextools.io/">View on DEXTools</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section id="tokenomics">
-    <h2>Tokenomics</h2>
-    <div class="grid">
-      <div class="tile">
-        <div class="k">Total Supply</div>
-        <div class="v">1,000,000,000 POOR</div>
+    <section id="tokenomics" class="section">
+      <div class="container">
+        <h3 class="section-title">Tokenomics</h3>
+        <div class="cards">
+          <div class="card">
+            <div class="k">Total Supply</div>
+            <div class="v">1,000,000,000 POOR</div>
+          </div>
+          <div class="card">
+            <div class="k">In Circulation</div>
+            <div class="v">~695,089,465 POOR</div>
+          </div>
+          <div class="card">
+            <div class="k">Liquidity (est.)</div>
+            <div class="v">12,000,000 POOR + 0.011 BNB</div>
+          </div>
+          <div class="card">
+            <div class="k">Holders</div>
+            <div class="v">Growing daily</div>
+          </div>
+        </div>
       </div>
-      <div class="tile">
-        <div class="k">In Circulation</div>
-        <div class="v">~695,089,465 POOR</div>
+    </section>
+
+    <section id="contract" class="section">
+      <div class="container">
+        <h3 class="section-title">Smart Contract</h3>
+        <p><strong>Address:</strong> <span id="ca">0x4B336AABbB057503aD2a588201D56F0e6EadC281</span></p>
+        <div class="cta">
+          <button class="btn btn--primary" id="copyBtn" type="button">Copy Address</button>
+          <a class="btn btn--ghost" target="_blank" href="https://bscscan.com/token/0x4B336AABbB057503aD2a588201D56F0e6EadC281">View on BscScan</a>
+        </div>
       </div>
-      <div class="tile">
-        <div class="k">Liquidity</div>
-        <div class="v">12,000,000 POOR + 0.011 BNB</div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container two-col">
+        <div class="col">
+          <h3>About PoorCoin</h3>
+          <p>PoorCoin is a playful meme token with a serious commitment to transparency. No promises, no financial advice—just community vibes. Join us, share ideas, and have fun.</p>
+        </div>
+        <div class="col">
+          <h3>Quick Links</h3>
+          <div class="links">
+            <a class="btn btn--pill" target="_blank" href="https://t.me/yourtelegram">Telegram</a>
+            <a class="btn btn--pill" target="_blank" href="https://twitter.com/yourtwitter">Twitter / X</a>
+            <a class="btn btn--pill" target="_blank" href="https://pancakeswap.finance/swap?outputCurrency=0x4B336AABbB057503aD2a588201D56F0e6EadC281">Buy POOR</a>
+          </div>
+        </div>
       </div>
-      <div class="tile">
-        <div class="k">Holders</div>
-        <div class="v">Growing daily</div>
-      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <small>© 2025 PoorCoin — Built by the community</small>
     </div>
-  </section>
-
-  <section id="contract">
-    <h2>Smart Contract</h2>
-    <p><b>Chain:</b> BNB Smart Chain (BEP20)</p>
-    <p><b>Address:</b> 
-      <span id="contract-address">0x4B336AABbB057503aD2a588201D56F0e6EadC281</span>
-    </p>
-    <button onclick="copyAddress()">Copy Address</button>
-  </section>
-
-  <section>
-    <h2>Quick Links</h2>
-    <div class="buttons">
-      <a href="https://t.me/yourtelegram" target="_blank">Telegram</a>
-      <a href="https://twitter.com/yourtwitter" target="_blank">Twitter/X</a>
-      <a href="https://pancakeswap.finance/swap?outputCurrency=0x4B336AABbB057503aD2a588201D56F0e6EadC281" target="_blank">Buy on PancakeSwap</a>
-    </div>
-  </section>
-
-  <footer>
-    © 2025 PoorCoin | Built by the community
   </footer>
 
   <script>
-    function copyAddress() {
-      const address = document.getElementById("contract-address").innerText;
-      navigator.clipboard.writeText(address);
-      alert("Contract address copied: " + address);
-    }
+    document.getElementById('copyBtn').addEventListener('click', () => {
+      const txt = document.getElementById('ca').textContent.trim();
+      navigator.clipboard.writeText(txt).then(() => {
+        alert('Contract address copied:\\n' + txt);
+      });
+    });
   </script>
 </body>
 </html>
