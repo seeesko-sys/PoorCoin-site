@@ -1,61 +1,126 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>PoorCoin — Whitepaper</title>
-  <meta name="description" content="PoorCoin (POOR) whitepaper: overview, tokenomics, roadmap, and disclaimers."/>
-  <link rel="icon" href="PoorCoin.png"/>
+  <meta name="description" content="PoorCoin (POOR) — community-driven meme token on BNB Smart Chain. Whitepaper, tokenomics, links and roadmap." />
+
+  <!-- Вграден базов стил (можеш да го махнеш, ако ползваш style.css) -->
   <style>
-    :root{--ink:#0b1220;--muted:#5f6b7a;--bd:#e7eef2;--card:#fff;--bg:#f6faf7;--brand:#16a34a}
-    *{box-sizing:border-box} html,body{margin:0}
-    body{font:16px/1.7 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg)}
-    .container{max-width:960px;margin:0 auto;padding:24px}
-    header{display:flex;gap:14px;align-items:center;margin-bottom:12px}
-    header img{width:44px;height:44px;border-radius:10px}
-    nav a{margin-right:12px;text-decoration:none;color:var(--ink);font-weight:700;padding:6px 10px;border-radius:999px;background:#fff;border:1px solid var(--bd)}
-    nav a:hover{box-shadow:0 0 0 6px rgba(34,197,94,.15)}
-    h1{margin:.2rem 0 0}
+    :root{
+      --bg:#f7fbf7; --card:#ffffff; --ink:#1d2b22; --muted:#5b6a60; --brand:#16a34a;
+      --soft:#eaf6ea; --ring:#def5df;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;color:var(--ink);background:linear-gradient(180deg,#f6fff6, #f5faf6 40%, #f7fbf7);}
+    a{color:#0f766e;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .site{padding:32px 16px 64px}
+    .wrap{max-width:1100px;margin:0 auto}
+    header .back{font-size:.95rem}
+    header h1{display:flex;align-items:center;gap:12px;margin:10px 0 6px}
+    header h1 img{width:42px;height:42px;border-radius:50%}
+    header .sub{color:var(--muted);font-weight:500;margin:0 0 20px}
+
+    .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+    @media (max-width:940px){.grid{grid-template-columns:1fr;}}
+    .card{background:var(--card);border-radius:16px;padding:18px;box-shadow:0 1px 0 rgba(0,0,0,.04), 0 10px 20px -12px rgba(0,0,0,.08);border:1px solid var(--ring)}
+    .card h2, .card h3{margin:8px 0 12px}
+    .pill{display:inline-block;padding:.35rem .6rem;border-radius:999px;background:var(--soft);border:1px solid var(--ring);font-size:.8rem;margin:.2rem .25rem .2rem 0}
     .muted{color:var(--muted)}
-    .card{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:18px;box-shadow:0 10px 26px rgba(2,8,20,.05);margin:16px 0}
-    h2{margin:0 0 8px}
-    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-    @media(max-width:820px){.grid2{grid-template-columns:1fr}}
-    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:#ecfdf5;color:#065f46;font-weight:800;font-size:12px;margin-right:8px}
-    .btn{display:inline-block;background:#16a34a;color:#fff;text-decoration:none;font-weight:800;border-radius:12px;padding:10px 14px}
-    .btn.dark{background:#0f172a}
-    ul,ol{margin:.3rem 0 .6rem 1.2rem}
-    code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:#0f172a;color:#e2e8f0;border-radius:8px;padding:6px 8px}
-    footer{margin:20px 0 10px;text-align:center;color:var(--muted);font-size:14px}
+
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;border-radius:12px;border:1px solid var(--ring);background:#fff;padding:.65rem .9rem;cursor:pointer;font-weight:600}
+    .btn:focus{outline:3px solid #b7f7bf;outline-offset:2px}
+    .btn.primary{background:var(--brand);color:#fff;border-color:#0d8b39}
+    .btn.ghost{background:#fff}
+    .btn.tiny{padding:.35rem .5rem;border-radius:10px;font-size:.85rem}
+    .stack{display:flex;flex-wrap:wrap;gap:.5rem}
+
+    .kpi{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+    @media (max-width:640px){.kpi{grid-template-columns:1fr}}
+    .kpi .tile{padding:12px;border-radius:12px;background:var(--soft);border:1px solid var(--ring)}
+    .mono{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace}
+    .warn{background:#fff7ed;border:1px solid #fde2bf;color:#8a4a00;border-radius:12px;padding:12px}
+
+    footer{margin-top:28px;color:var(--muted);font-size:.95rem}
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <img src="PoorCoin.png" alt="PoorCoin Logo"/>
-      <div>
-        <nav><a href="index.html">← Back to site</a></nav>
-        <h1>PoorCoin — Whitepaper</h1>
-        <div class="muted">The community-driven meme token on BNB Smart Chain.</div>
-      </div>
-    </header>
+  <main class="site">
+    <div class="wrap">
+      <header>
+        <a class="back" href="index.html">← Back to site</a>
+        <h1>
+          <img src="PoorCoin.png" alt="PoorCoin logo" />
+          <span>PoorCoin — <span class="muted">Whitepaper</span></span>
+        </h1>
+        <p class="sub">The community-driven meme token on <strong>BNB Smart Chain (BEP-20)</strong>.</p>
+      </header>
 
-    <section class="card">
-      <h2>Overview</h2>
-      <p><b>PoorCoin (POOR)</b> is a simple, community-driven meme token on the <span class="pill">BNB Smart Chain (BEP-20)</span>.
-         The goal is to keep things fun, transparent and fair while the community experiments and grows together.</p>
-      <p><span class="pill">Ticker: POOR</span> <span class="pill">Total supply: 1,000,000,000</span> <span class="pill">Chain: BSC</span></p>
-      <p class="muted">Official links:</p>
-      <p class="card" style="margin:10px 0 0">
-        <a class="btn" href="https://pancakeswap.finance/swap?outputCurrency=0x4B336AABbB057503aD2a588201D56F0e6EadC281" target="_blank" rel="noopener">Buy on PancakeSwap</a>
-        &nbsp; <a class="btn dark" href="https://www.geckoterminal.com/bsc/pools/0xec7e56657bb005d3e10add91f72459fd3bbee2d1" target="_blank" rel="noopener">Live Chart</a>
-        &nbsp; <a class="btn dark" href="https://t.me/poorcoin_bsc" target="_blank" rel="noopener">Telegram</a>
-        &nbsp; <a class="btn dark" href="https://x.com/SeeeskoTodorov" target="_blank" rel="noopener">X (Twitter)</a>
-      </p>
-    </section>
+      <div class="grid">
+        <!-- LEFT -->
+        <section class="card">
+          <h2>Overview</h2>
+          <p>PoorCoin (POOR) is a simple, community-first meme token on the <strong>BNB Smart Chain</strong>.
+            Our goal is to keep things <strong>fun, transparent and fair</strong> while the community experiments and grows together.</p>
 
-    <section class="card">
-      <h2>Smart Contract</h2>
-      <p>Standard BEP-20 token. Always verify the address on BscScan before any transaction.</p>
-      <p>Contract (BSC): <code>0x4B336AABbB057503aD2a588201D56F0e6EadC281</code></p>
-      <p><a class="btn" href="https://bscscan.com/token/0x4B336AABbB
+          <div class="kpi" style="margin:14px 0 8px">
+            <div class="tile"><div class="muted">Ticker</div><div><strong>POOR</strong></div></div>
+            <div class="tile"><div class="muted">Chain</div><div><strong>BSC (BEP-20)</strong></div></div>
+            <div class="tile"><div class="muted">Total supply</div><div><strong>1,000,000,000 POOR</strong></div></div>
+            <div class="tile"><div class="muted">Contract</div><div class="mono" id="addrShort">—</div></div>
+          </div>
+
+          <div class="stack" style="margin:8px 0 16px">
+            <a id="buyTop" class="btn primary" href="#" target="_blank" rel="noopener">Buy on PancakeSwap</a>
+            <a id="dexTop" class="btn ghost" href="#" target="_blank" rel="noopener">Live chart (DEXTools)</a>
+          </div>
+
+          <h3>Tokenomics</h3>
+          <ul>
+            <li><strong>Supply:</strong> fixed at 1,000,000,000 POOR.</li>
+            <li><strong>Liquidity:</strong> community-driven. Current est.: <em>12,000,000 POOR + 0.011 BNB</em>.</li>
+            <li><strong>In circulation (wallet):</strong> <em>~695,089,465 POOR</em> (displayed on the homepage).</li>
+            <li><strong>Taxes & ownership:</strong> none taken by code; contract is a standard BEP-20.</li>
+          </ul>
+
+          <h3>Vision</h3>
+          <p>Keep it lightweight and fair: a meme coin that’s actually owned and pushed by its community — open links,
+            verifiable contract, simple rules. We ship small, public improvements and let holders steer the direction.</p>
+
+          <h3>Roadmap (high-level)</h3>
+          <ol>
+            <li><strong>Phase 1:</strong> Launch site, socials, initial LP, basic listings (DEXTools).</li>
+            <li><strong>Phase 2:</strong> Community growth (Telegram/X), small bounties, improve docs (this page).</li>
+            <li><strong>Phase 3:</strong> Apply to major trackers (CoinGecko/CoinMarketCap) and light integrations.</li>
+            <li><strong>Phase 4:</strong> Utilities decided by the community; seasonal campaigns.</li>
+          </ol>
+
+          <div class="warn" style="margin-top:12px">
+            <strong>Disclaimer:</strong> POOR is a meme token with no promise of financial return. Crypto is risky —
+            always do your own research and double-check the contract on BscScan before any transaction.
+          </div>
+        </section>
+
+        <!-- RIGHT -->
+        <aside class="card">
+          <h2>Smart Contract</h2>
+          <p class="muted">Standard BEP-20 token. Always verify the address on BscScan before any transaction.</p>
+
+          <div class="tile" style="margin:10px 0">
+            <div class="muted">Contract (BSC)</div>
+            <div class="mono" id="addrFull" style="word-break:break-all"></div>
+          </div>
+
+          <div class="stack" style="margin-bottom:14px">
+            <button id="copyBtn" class="btn tiny ghost">Copy</button>
+            <a id="bscBtn" class="btn tiny ghost" href="#" target="_blank" rel="noopener">View on BscScan</a>
+            <button id="mmBtn" class="btn tiny ghost">Add to MetaMask</button>
+          </div>
+
+          <h3>Official links</h3>
+          <div class="stack">
+            <a class="btn tiny ghost" href="https://t.me/poorcoin_bsc" target="_blank" rel="noopener">Telegram</a>
+            <a class="btn tiny ghost" href="https://x.com/SeeeskoTodorov" target="_blank" rel="noopener">X (Twitter)</a>
+            <a id="pcsBtn" class="btn tiny ghost" href="#" target="_blank" rel="noopener">Pa
