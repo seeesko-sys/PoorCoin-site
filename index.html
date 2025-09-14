@@ -1,102 +1,75 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PoorCoin (POOR) — Official Site</title>
-  <meta name="description" content="PoorCoin (POOR) — community-driven meme token on BNB Smart Chain. Trade on PancakeSwap, view contract on BscScan, join Telegram." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="https://ipfs.io/ipfs/bafkreifvwdfzahh6ul2bseueh4427uea722o3m7zxlcnuc4m4orgn4i4ry" />
-  <meta property="og:title" content="PoorCoin (POOR)" />
-  <meta property="og:description" content="Community-driven meme token on BNB Smart Chain." />
-  <meta property="og:image" content="https://ipfs.io/ipfs/bafkreifvwdfzahh6ul2bseueh4427uea722o3m7zxlcnuc4m4orgn4i4ry" />
-  <meta name="theme-color" content="#09c372" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PoorCoin (POOR) - Official Website</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <header class="topbar">
-    <div class="wrap">
-      <div class="brand">
-        <img class="logo" alt="PoorCoin logo"
-             src="https://ipfs.io/ipfs/bafkreifvwdfzahh6ul2bseueh4427uea722o3m7zxlcnuc4m4orgn4i4ry" />
-        <span>PoorCoin</span><small>POOR</small>
-      </div>
-      <nav class="nav">
-        <a id="nav-swap" target="_blank" rel="noopener">Buy</a>
-        <a id="nav-liq" target="_blank" rel="noopener">Add Liquidity</a>
-        <a id="nav-scan" target="_blank" rel="noopener">BscScan</a>
-        <a href="https://t.me/poorcoin_bsc" target="_blank" rel="noopener">Telegram</a>
-        <!-- TODO: replace with your real X/Twitter -->
-        <a href="https://x.com/your_twitter" target="_blank" rel="noopener">Twitter</a>
-      </nav>
-    </div>
+  <header>
+    <img src="https://raw.githubusercontent.com/seeesko-sys/PoorCoin-site/main/PoorCoin.png" alt="PoorCoin Logo" class="logo">
+    <h1>PoorCoin (POOR)</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="https://pancakeswap.finance/swap?outputCurrency=0x6208384e2dda2ab804a5b75aebc1609ba9ce7336" target="_blank">Buy</a>
+      <a href="https://pancakeswap.finance/add/BNB/0x6208384e2dda2ab804a5b75aebc1609ba9ce7336" target="_blank">Add Liquidity</a>
+      <a href="https://bscscan.com/token/0x6208384e2dda2ab804a5b75aebc1609ba9ce7336" target="_blank">BscScan</a>
+      <a href="https://t.me/Poorcoin" target="_blank">Telegram</a>
+      <a href="https://twitter.com/" target="_blank">Twitter</a>
+    </nav>
   </header>
 
-  <main class="wrap">
-    <section class="hero card">
+  <main>
+    <section class="hero">
       <div class="hero-text">
-        <h1>Meet <span>POOR</span> — the People’s Meme Token</h1>
-        <p>Community-driven, simple tokenomics, 1,000,000,000 total supply on BNB Smart Chain (BEP-20).</p>
-
-        <div class="cta">
-          <a id="btn-swap" class="btn primary" target="_blank" rel="noopener">Buy on PancakeSwap</a>
-          <a id="btn-liq" class="btn ghost" target="_blank" rel="noopener">Add Liquidity</a>
-          <a id="btn-scan" class="btn ghost" target="_blank" rel="noopener">View on BscScan</a>
+        <h2>Meet <span class="highlight">POOR</span> — the People’s Meme Token</h2>
+        <p>
+          Community-driven, simple tokenomics, 1,000,000,000 total supply on BNB Smart Chain (BEP-20).
+        </p>
+        <div class="buttons">
+          <a href="https://pancakeswap.finance/swap?outputCurrency=0x6208384e2dda2ab804a5b75aebc1609ba9ce7336" class="btn buy" target="_blank">Buy on PancakeSwap</a>
+          <a href="https://pancakeswap.finance/add/BNB/0x6208384e2dda2ab804a5b75aebc1609ba9ce7336" class="btn" target="_blank">Add Liquidity</a>
+          <a href="https://bscscan.com/token/0x6208384e2dda2ab804a5b75aebc1609ba9ce7336" class="btn" target="_blank">View on BscScan</a>
         </div>
-
-        <div class="contract">
-          <label>Contract Address</label>
-          <code id="addr-short">0x…</code>
-          <div class="contract-actions">
-            <button id="btn-copy" class="chip">Copy</button>
-            <button id="btn-metamask" class="chip">Add to MetaMask</button>
+        <div class="contract-box">
+          <p><b>Contract Address:</b></p>
+          <code id="contractAddress">0x6208384e2dda2ab804a5b75aebc1609ba9ce7336</code>
+          <div class="contract-buttons">
+            <button onclick="copyAddress()">Copy</button>
+            <button onclick="addToMetaMask()">Add to MetaMask</button>
           </div>
         </div>
       </div>
-      <img class="hero-img" alt="PoorCoin mascot"
-           src="https://ipfs.io/ipfs/bafkreifvwdfzahh6ul2bseueh4427uea722o3m7zxlcnuc4m4orgn4i4ry" />
+      <div class="hero-img">
+        <img src="https://raw.githubusercontent.com/seeesko-sys/PoorCoin-site/main/PoorCoin.png" alt="PoorCoin Big Logo">
+      </div>
     </section>
 
-    <section class="grid">
-      <div class="card">
-        <h3>Tokenomics</h3>
-        <ul class="list">
-          <li>Symbol: <b>POOR</b></li>
-          <li>Decimals: <b>18</b></li>
-          <li>Total Supply: <b>1,000,000,000</b></li>
-          <li>Chain: <b>BNB Smart Chain (BSC)</b></li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Links</h3>
-        <ul class="links">
-          <li><a id="lnk-swap" target="_blank" rel="noopener">PancakeSwap — Trade</a></li>
-          <li><a id="lnk-liq" target="_blank" rel="noopener">PancakeSwap — Add Liquidity</a></li>
-          <li><a id="lnk-scan" target="_blank" rel="noopener">BscScan — Token</a></li>
-          <li><a href="https://t.me/poorcoin_bsc" target="_blank" rel="noopener">Telegram</a></li>
-          <!-- Optional Medium article -->
-          <!-- <li><a href="https://medium.com/@seeesko/poorcoin-poor-community-driven-meme-token-on-bnb-smart-chain-0cbb7187d07c" target="_blank" rel="noopener">Medium — Intro</a></li> -->
-        </ul>
-      </div>
-      <div class="card">
-        <h3>How to Buy</h3>
-        <ol class="steps">
-          <li>Open PancakeSwap and connect MetaMask (BSC network).</li>
-          <li>Paste the POOR contract address.</li>
-          <li>Swap BNB → POOR and confirm.</li>
-        </ol>
-      </div>
+    <section class="tokenomics">
+      <h3>Tokenomics</h3>
+      <ul>
+        <li><b>Symbol:</b> POOR</li>
+        <li><b>Decimals:</b> 18</li>
+        <li><b>Total Supply:</b> 1,000,000,000</li>
+        <li><b>Chain:</b> BNB Smart Chain (BSC)</li>
+      </ul>
+    </section>
+
+    <section class="links">
+      <h3>Links</h3>
+      <ul>
+        <li><a href="https://pancakeswap.finance/swap?outputCurrency=0x6208384e2dda2ab804a5b75aebc1609ba9ce7336" target="_blank">PancakeSwap — Trade</a></li>
+        <li><a href="https://pancakeswap.finance/add/BNB/0x6208384e2dda2ab804a5b75aebc1609ba9ce7336" target="_blank">PancakeSwap — Add Liquidity</a></li>
+        <li><a href="https://bscscan.com/token/0x6208384e2dda2ab804a5b75aebc1609ba9ce7336" target="_blank">BscScan — Token</a></li>
+        <li><a href="https://t.me/Poorcoin" target="_blank">Telegram</a></li>
+      </ul>
     </section>
   </main>
 
-  <footer class="foot">
-    <div class="wrap">
-      <span>© <span id="year"></span> PoorCoin. All rights reserved.</span>
-      <span class="muted">This site is for informational purposes only. Not financial advice.</span>
-    </div>
+  <footer>
+    <p>© 2025 PoorCoin. All rights reserved.</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
