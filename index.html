@@ -1,149 +1,111 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>PoorCoin (POOR) — The People’s Meme Token</title>
-  <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body {
-      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background: linear-gradient(135deg, #0f0f0f 0%, #1c1c24 100%);
-      color: #fff;
-      overflow-x: hidden;
-    }
-    a { text-decoration:none; color:inherit; }
-    h1,h2,h3 { font-weight:700; }
-    header {
-      position:fixed; top:0; left:0; right:0;
-      background: rgba(0,0,0,0.7);
-      backdrop-filter: blur(10px);
-      padding:15px 40px;
-      display:flex; justify-content:space-between; align-items:center;
-      z-index:1000;
-    }
-    header .logo a {
-      font-size:1.4em; font-weight:800; color:#facc15;
-      text-decoration:none;
-    }
-    header nav a {
-      margin-left:20px; font-size:0.95em; color:#aaa; transition:0.2s;
-    }
-    header nav a:hover { color:#fff; }
-    .hero {
-      height:100vh; display:flex; flex-direction:column; justify-content:center;
-      align-items:center; text-align:center; padding:0 20px;
-      background: radial-gradient(circle at 30% 20%, rgba(124,92,255,.25), transparent 60%),
-                  radial-gradient(circle at 80% 80%, rgba(34,197,94,.2), transparent 60%);
-    }
-    .hero h1 { font-size:clamp(32px,6vw,64px); margin-bottom:20px; line-height:1.2; }
-    .hero p { font-size:clamp(16px,2vw,20px); max-width:700px; margin:0 auto 20px; color:#bbb; }
-    .hero-buttons { display:flex; flex-wrap:wrap; gap:15px; justify-content:center; margin-bottom:20px; }
-    .hero-buttons a {
-      background:#7c5cff; padding:12px 24px; border-radius:30px;
-      color:#fff; font-weight:600; transition:0.2s;
-    }
-    .hero-buttons a:hover { background:#9f84ff; }
-    .hero img {
-      width:200px; margin-top:20px;
-      animation: float 3s ease-in-out infinite;
-    }
-    @keyframes float { 0%,100% { transform: translateY(0);} 50% { transform: translateY(-15px);} }
-    .contract-box {
-      margin-top:30px; padding:15px; background:#1c1c24;
-      border-radius:10px; display:inline-block; text-align:left;
-    }
-    .contract-box p { margin-bottom:10px; font-size:14px; color:#bbb; }
-    .contract-address {
-      font-family: monospace; background:#000; padding:8px 12px; border-radius:5px;
-      display:inline-block; margin-right:10px; color:#22c55e;
-    }
-    .copy-btn {
-      background:#22c55e; border:none; padding:8px 14px; border-radius:5px;
-      color:#fff; cursor:pointer; font-weight:600;
-    }
-    section#tokenomics { padding:80px 20px; background:#0f0f0f; text-align:center; }
-    #tokenomics h2 { font-size:2.5em; margin-bottom:15px; }
-    #tokenomics p { color:#aaa; max-width:800px; margin:0 auto 40px; }
-    .cards {
-      display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-      gap:20px; max-width:1000px; margin:0 auto 40px;
-    }
-    .card {
-      background:#1c1c24; padding:20px; border-radius:15px;
-      box-shadow:0 4px 15px rgba(0,0,0,.4);
-    }
-    .card h3 { margin-bottom:10px; color:#7c5cff; }
-    .card p { font-size:1.2em; font-weight:600; }
-    canvas { max-width:400px; margin:0 auto; }
-    .buy-btn {
-      position:fixed; bottom:20px; right:20px;
-      background:#22c55e; color:#fff; padding:14px 26px; border-radius:50px;
-      font-weight:700; box-shadow:0 4px 20px rgba(0,0,0,.4); transition:0.2s; z-index:1000;
-    }
-    .buy-btn:hover { background:#16a34a; }
-  </style>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>PoorCoin (POOR) — The People's Meme Token</title>
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAg..." />
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAg..." />
+
+<!-- Meta -->
+<meta name="author" content="Todorov & Lesev">
+<meta name="keywords" content="PoorCoin, POOR, Meme Token, BNB Chain, Binance Smart Chain, Crypto, DeFi">
+<meta name="description" content="PoorCoin (POOR) — The People’s Meme Token on BNB Chain. 1B supply, 200M locked forever. Transparent. Fair. Community-driven.">
+<meta name="description" lang="bg" content="PoorCoin (POOR) — Народният мем токен в мрежата BNB Chain. 1 млрд. токена, 200 млн. заключени завинаги. Прозрачен. Честен. Общностен.">
+
+<!-- OpenGraph -->
+<meta property="og:title" content="PoorCoin (POOR) — The People’s Meme Token">
+<meta property="og:description" content="The People’s Meme Token on BNB Chain. 1B supply, 200M locked forever. Transparent. Fair. Community-driven.">
+<meta property="og:image" content="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA..." />
+<meta property="og:url" content="https://poorcoin.net">
+<meta property="og:type" content="website">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PoorCoin (POOR)">
+<meta name="twitter:description" content="The People’s Meme Token on BNB Chain. 1B supply, 200M locked forever. Transparent. Fair. Community-driven.">
+<meta name="twitter:image" content="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA..." />
+
+<style>
+:root{ --bg:#0f0f0f; --card:#1c1c24; --muted:#9aa3b2; --accent:#7c5cff; --green:#22c55e; }
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Segoe UI, Roboto, Arial, Helvetica, sans-serif;background:linear-gradient(135deg,#0f0f0f 0%,#1c1c24 100%);color:#fff;line-height:1.4;}
+header{position:fixed;top:0;left:0;right:0;background:rgba(0,0,0,0.7);backdrop-filter:blur(10px);padding:15px 40px;display:flex;justify-content:space-between;align-items:center;z-index:1000;}
+header .logo a{font-size:1.4em;font-weight:800;color:#facc15;text-decoration:none;}
+header nav a{margin-left:20px;color:#aaa;text-decoration:none}
+.hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0 20px;background:radial-gradient(circle at 30% 20%, rgba(124,92,255,.25), transparent 60%), radial-gradient(circle at 80% 80%, rgba(34,197,94,.2), transparent 60%);}
+.hero h1{font-size:clamp(32px,6vw,64px);margin-bottom:20px;}
+.hero p{max-width:700px;color:#bbb;margin-bottom:20px;}
+.hero-buttons{display:flex;gap:15px;flex-wrap:wrap;justify-content:center;margin-bottom:20px;}
+.hero-buttons a{background:var(--accent);padding:12px 24px;border-radius:30px;color:#fff;font-weight:600;}
+.contract-box{margin-top:20px;padding:12px;background:var(--card);border-radius:10px;display:inline-block;text-align:left;}
+.contract-address{font-family:monospace;background:#000;padding:8px 12px;border-radius:5px;color:var(--green);}
+.copy-btn{background:var(--green);border:none;padding:8px 12px;border-radius:6px;color:#fff;cursor:pointer}
+#tokenomics{padding:80px 20px;background:var(--bg);text-align:center}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;max-width:1000px;margin:0 auto 40px;}
+.card{background:var(--card);padding:20px;border-radius:15px;box-shadow:0 4px 15px rgba(0,0,0,.4);}
+.buy-btn{position:fixed;bottom:20px;right:20px;background:var(--green);padding:14px 26px;border-radius:50px;font-weight:700;box-shadow:0 4px 20px rgba(0,0,0,.4);}
+
+/* Watermark */
+.watermark{position:fixed;right:30px;bottom:30px;width:80px;height:80px;opacity:0.18;pointer-events:none;z-index:800;display:block;transition:transform 0.6s ease,opacity 0.6s ease;}
+@media (max-width:768px){.watermark{display:none}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}
+</style>
 </head>
 <body>
-  <header>
-    <div class="logo"><a href="https://poorcoin.net">PoorCoin (POOR)</a></div>
-    <nav>
-      <a href="#tokenomics">Tokenomics</a>
-      <a href="https://bscscan.com/token/0x6208384e2dda2ab804a5b75aebc1609ba9ce7336" target="_blank">BscScan</a>
-      <a href="https://t.me/poorcoin_bsc" target="_blank">Telegram</a>
-      <a href="https://x.com/SeeeskoTodorov" target="_blank">Twitter</a>
-      <a href="https://medium.com/@seeesko" target="_blank">Medium</a>
-    </nav>
-  </header>
+<header>
+  <div class="logo"><a href="https://poorcoin.net">PoorCoin (POOR)</a></div>
+  <nav>
+    <a href="#tokenomics">Tokenomics</a>
+    <a href="https://bscscan.com/token/0x6208384e2dda2ab804a5b75aebc1609ba9ce7336" target="_blank">BscScan</a>
+    <a href="https://t.me/poorcoin_bsc" target="_blank">Telegram</a>
+    <a href="https://x.com/SeeeskoTodorov" target="_blank">Twitter</a>
+    <a href="https://medium.com/@seeesko" target="_blank">Medium</a>
+  </nav>
+</header>
 
-  <section class="hero">
-    <h1>PoorCoin — The People’s Meme Token</h1>
-    <p>Community-driven, transparent and fair. With 1,000,000,000 POOR supply, 200M locked forever and only 10M currently circulating, PoorCoin is built to grow with its community.</p>
-    <div class="hero-buttons">
-      <a href="https://pancakeswap.finance/swap?outputCurrency=0x6208384e2dda2ab804a5b75aebc1609ba9ce7336" target="_blank">Buy on PancakeSwap</a>
-      <a href="https://bscscan.com/token/0x6208384e2dda2ab804a5b75aebc1609ba9ce7336" target="_blank">View on BscScan</a>
-    </div>
-    <img src="PoorCoin.png" alt="PoorCoin.png">
+<section class="hero">
+  <h1>PoorCoin — The People’s Meme Token</h1>
+  <p>Community-driven, transparent and fair. 1,000,000,000 POOR total supply — 200,000,000 permanently locked.</p>
+  <div class="hero-buttons">
+    <a href="https://pancakeswap.finance/swap?outputCurrency=0x6208384e2dda2ab804a5b75aebc1609ba9ce7336" target="_blank">Buy on PancakeSwap</a>
+    <a href="https://bscscan.com/token/0x6208384e2dda2ab804a5b75aebc1609ba9ce7336" target="_blank">View on BscScan</a>
+  </div>
 
-    <div class="contract-box">
-      <p>Official Contract Address:</p>
-      <span class="contract-address" id="contract">0x6208384e2dda2ab804a5b75aebc1609ba9ce7336</span>
-      <button class="copy-btn" onclick="copyAddress()">Copy</button>
-    </div>
-  </section>
+  <!-- Hero Logo -->
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA..." alt="PoorCoin Logo" style="width:220px;margin-top:20px;animation:float 3s ease-in-out infinite;">
 
-  <section id="tokenomics">
-    <h2>Tokenomics</h2>
-    <p>PoorCoin ($POOR) is designed with transparency and sustainability. Part of the supply is permanently locked in the contract, reducing the effective circulating supply.</p>
-    <div class="cards">
-      <div class="card"><h3>Total Supply</h3><p>1,000,000,000 POOR</p></div>
-      <div class="card"><h3>Locked Supply</h3><p style="color:#ef4444;">200,000,000 POOR</p></div>
-      <div class="card"><h3>Owner Holdings</h3><p style="color:#60a5fa;">790,000,000 POOR</p></div>
-      <div class="card"><h3>Circulating</h3><p style="color:#22c55e;">10,000,000 POOR</p></div>
-    </div>
-    <canvas id="chart"></canvas>
-  </section>
+  <div class="contract-box">
+    <p>Official Contract Address:</p>
+    <span class="contract-address" id="contract">0x6208384e2dda2ab804a5b75aebc1609ba9ce7336</span>
+    <button class="copy-btn" onclick="copyAddress()">Copy</button>
+  </div>
+</section>
 
-  <a class="buy-btn" href="https://pancakeswap.finance/swap?outputCurrency=0x6208384e2dda2ab804a5b75aebc1609ba9ce7336" target="_blank">Buy POOR</a>
+<section id="tokenomics">
+  <h2>Tokenomics</h2>
+  <p>PoorCoin ($POOR) is designed with transparency and sustainability. Part of the supply is permanently locked in the contract, reducing the effective circulating supply.</p>
+  <div class="cards">
+    <div class="card"><h3>Total Supply</h3><p>1,000,000,000 POOR</p></div>
+    <div class="card"><h3>Locked Supply</h3><p style="color:#ef4444;">200,000,000 POOR</p></div>
+    <div class="card"><h3>Owner Holdings</h3><p style="color:#60a5fa;">790,000,000 POOR</p></div>
+    <div class="card"><h3>Circulating</h3><p style="color:#22c55e;">10,000,000 POOR</p></div>
+  </div>
+  <canvas id="chart"></canvas>
+  <p style="font-size:0.85em;color:#666;margin-top:40px;">Created by Todorov & Lesev © 2025</p>
+</section>
 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script>
-    const ctx = document.getElementById('chart');
-    new Chart(ctx, {
-      type: 'pie',
-      data: {
-        labels: ['Locked (200M)','Owner Holdings (790M)','Circulating (10M)'],
-        datasets: [{
-          data: [200,790,10],
-          backgroundColor:['#ef4444','#60a5fa','#22c55e']
-        }]
-      }
-    });
-    function copyAddress() {
-      const text = document.getElementById("contract").innerText;
-      navigator.clipboard.writeText(text);
-      alert("Contract address copied!");
-    }
-  </script>
-</body>
-</html>
+<!-- Watermark -->
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA..." alt="" class="watermark" id="watermark">
+
+<a class="buy-btn" href="https://pancakeswap.finance/swap?outputCurrency=0x6208384e2dda2ab804a5b75aebc1609ba9ce7336" target="_blank">Buy POOR</a>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+// chart
+const ctx = document.getElementById('chart');
+new Chart(ctx, {type:'pie',data:{labels:['Locked (200M)','Owner Holdings (790M)','Circulating (10M)'],datasets:[{data:[200,790,10],backgroundColor:['#ef4444','#60a5fa','#22c55e']}]} });
+
+function copyAddress(){ const text = document.getElementById('contract').innerText; navigator.clipboard.writeText(text); alert('Contract
