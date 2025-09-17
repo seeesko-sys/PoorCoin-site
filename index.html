@@ -6,8 +6,8 @@
 <title>PoorCoin (POOR) — The People's Meme Token</title>
 
 <!-- Favicon -->
-<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAg..." />
-<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAg..." />
+<link rel="icon" type="image/png" href="favicon.png" />
+<link rel="apple-touch-icon" href="favicon.png" />
 
 <!-- Meta -->
 <meta name="author" content="Todorov & Lesev">
@@ -18,7 +18,7 @@
 <!-- OpenGraph -->
 <meta property="og:title" content="PoorCoin (POOR) — The People’s Meme Token">
 <meta property="og:description" content="The People’s Meme Token on BNB Chain. 1B supply, 200M locked forever. Transparent. Fair. Community-driven.">
-<meta property="og:image" content="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA..." />
+<meta property="og:image" content="logo_gold_2.png" />
 <meta property="og:url" content="https://poorcoin.net">
 <meta property="og:type" content="website">
 
@@ -26,7 +26,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="PoorCoin (POOR)">
 <meta name="twitter:description" content="The People’s Meme Token on BNB Chain. 1B supply, 200M locked forever. Transparent. Fair. Community-driven.">
-<meta name="twitter:image" content="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA..." />
+<meta name="twitter:image" content="logo_gold_2.png" />
 
 <style>
 :root{ --bg:#0f0f0f; --card:#1c1c24; --muted:#9aa3b2; --accent:#7c5cff; --green:#22c55e; }
@@ -46,7 +46,18 @@ header nav a{margin-left:20px;color:#aaa;text-decoration:none}
 #tokenomics{padding:80px 20px;background:var(--bg);text-align:center}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;max-width:1000px;margin:0 auto 40px;}
 .card{background:var(--card);padding:20px;border-radius:15px;box-shadow:0 4px 15px rgba(0,0,0,.4);}
-.buy-btn{position:fixed;bottom:20px;right:20px;background:var(--green);padding:14px 26px;border-radius:50px;font-weight:700;box-shadow:0 4px 20px rgba(0,0,0,.4);}
+
+/* Buy Button - преместен вляво */
+.buy-btn{
+  position:fixed;
+  bottom:20px;
+  left:20px;
+  background:var(--green);
+  padding:14px 26px;
+  border-radius:50px;
+  font-weight:700;
+  box-shadow:0 4px 20px rgba(0,0,0,.4);
+}
 
 /* Watermark */
 .watermark{position:fixed;right:30px;bottom:30px;width:80px;height:80px;opacity:0.18;pointer-events:none;z-index:800;display:block;transition:transform 0.6s ease,opacity 0.6s ease;}
@@ -75,7 +86,7 @@ header nav a{margin-left:20px;color:#aaa;text-decoration:none}
   </div>
 
   <!-- Hero Logo -->
-  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA..." alt="PoorCoin Logo" style="width:220px;margin-top:20px;animation:float 3s ease-in-out infinite;">
+  <img src="logo_gold_2.png" alt="PoorCoin Logo" style="width:220px;margin-top:20px;animation:float 3s ease-in-out infinite;">
 
   <div class="contract-box">
     <p>Official Contract Address:</p>
@@ -98,7 +109,7 @@ header nav a{margin-left:20px;color:#aaa;text-decoration:none}
 </section>
 
 <!-- Watermark -->
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA..." alt="" class="watermark" id="watermark">
+<img src="watermark.png" alt="" class="watermark" id="watermark">
 
 <a class="buy-btn" href="https://pancakeswap.finance/swap?outputCurrency=0x6208384e2dda2ab804a5b75aebc1609ba9ce7336" target="_blank">Buy POOR</a>
 
@@ -108,4 +119,9 @@ header nav a{margin-left:20px;color:#aaa;text-decoration:none}
 const ctx = document.getElementById('chart');
 new Chart(ctx, {type:'pie',data:{labels:['Locked (200M)','Owner Holdings (790M)','Circulating (10M)'],datasets:[{data:[200,790,10],backgroundColor:['#ef4444','#60a5fa','#22c55e']}]} });
 
-function copyAddress(){ const text = document.getElementById('contract').innerText; navigator.clipboard.writeText(text); alert('Contract
+function copyAddress(){ const text = document.getElementById('contract').innerText; navigator.clipboard.writeText(text); alert('Contract address copied!'); }
+
+// watermark scroll behavior
+let lastScroll = window.scrollY;
+let timeoutId = null;
+window.addEventListener('scroll', ()=>{ const wm = document.get
