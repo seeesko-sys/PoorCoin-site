@@ -2,40 +2,156 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PoorCoin (POOR) - Official Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PoorCoin (POOR) – Official Site</title>
 
-  <!-- Новото лого -->
+  <!-- Favicon (новото лого 32x32 SVG) -->
   <link rel="icon" href="poorcoin_32x32.svg" type="image/svg+xml" />
 
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root{
+      --bg:#f7f7f9;
+      --card:#ffffff;
+      --ink:#111111;
+      --muted:#666;
+      --brand:#111; /* минималистично черно */
+      --ring:#e7e7ec;
+      --accent:#0f172a;
+      --link:#0a66c2;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+    a{color:var(--link);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1100px;margin:0 auto;padding:24px}
+    header{
+      position:sticky;top:0;z-index:10;
+      backdrop-filter:saturate(180%) blur(6px);
+      background:rgba(255,255,255,.75);
+      border-bottom:1px solid var(--ring)
+    }
+    .nav{display:flex;align-items:center;gap:16px;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand a{display:flex;align-items:center;gap:12px;color:var(--ink);text-decoration:none}
+    .brand-badge{
+      display:grid;place-items:center;
+      width:44px;height:44px;border-radius:10px;
+      background:#fff;border:1px solid var(--ring); box-shadow:0 1px 2px rgba(16,24,40,.06)
+    }
+    .brand-text{font-weight:800;letter-spacing:.4px}
+    nav .links{display:flex;gap:10px;flex-wrap:wrap}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:10px 14px;border-radius:10px;border:1px solid var(--ring);
+      background:#fff;color:var(--ink);text-decoration:none;font-weight:600;
+      transition:transform .08s ease, box-shadow .2s ease
+    }
+    .btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(16,24,40,.08)}
+    .btn.primary{background:var(--ink);color:#fff;border-color:var(--ink)}
+    .hero{padding:36px 0 18px}
+    .grid{display:grid;gap:22px;grid-template-columns:1.2fr .8fr}
+    @media (max-width:900px){.grid{grid-template-columns:1fr}}
+    .card{
+      background:var(--card);border:1px solid var(--ring);border-radius:16px;
+      box-shadow:0 8px 30px rgba(16,24,40,.06)
+    }
+    .card-body{padding:22px}
+    .logo-card{
+      display:grid;place-items:center;aspect-ratio:2 / 1.1;
+      background:#fff;border:1px dashed var(--ring);border-radius:14px
+    }
+    .logo-wrap{display:grid;place-items:center;background:#fff;border-radius:12px;padding:14px}
+    /* Инлайн SVG логото – черно, лек наклон */
+    .logo svg{width:min(520px,90%);height:auto}
+    .kicker{font-size:.94rem;color:var(--muted);margin:4px 0 8px}
+    .title{font-size:2rem;font-weight:800;margin:0 0 10px}
+    .copy{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px}
+    .code{
+      font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;
+      padding:8px 10px;border:1px solid var(--ring);border-radius:10px;background:#fff
+    }
+    .stack{display:flex;flex-direction:column;gap:14px}
+    .list{margin:0;padding:0 0 0 18px}
+    footer{margin-top:28px;padding:26px 0;border-top:1px solid var(--ring);text-align:center;color:var(--muted)}
+    .by{margin-top:6px;font-weight:800;letter-spacing:.6px;color:var(--ink)}
+  </style>
 </head>
 <body>
+
   <header>
-    <h1>PoorCoin (POOR)</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="https://bscscan.com/token/0x6208384e2dda2ab804a5b75aebc1609ba9ce7336" target="_blank">Contract</a>
-      <a href="https://t.me/poorcoin_bsc" target="_blank">Telegram</a>
-      <a href="https://x.com/SeeeskoTodorov" target="_blank">Twitter</a>
-      <a href="https://medium.com/@seeesko/poorcoin-poor-the-peoples-meme-token-2c7d47ef2989" target="_blank">Medium</a>
-    </nav>
+    <div class="wrap nav">
+      <div class="brand">
+        <a href="https://poorcoin.net" aria-label="Go to home">
+          <div class="brand-badge">
+            <!-- мини логце в хедъра (SVG, черно „POOR“, наклон) -->
+            <svg viewBox="0 0 120 120" aria-hidden="true" width="28" height="28">
+              <g transform="skewX(-12)">
+                <text x="60" y="70" text-anchor="middle"
+                      font-family="Arial Black, sans-serif" font-size="60"
+                      font-weight="900" fill="#000">POOR</text>
+              </g>
+            </svg>
+          </div>
+          <div class="brand-text">PoorCoin</div>
+        </a>
+      </div>
+      <nav class="links">
+        <a class="btn" href="https://bscscan.com/token/0x6208384e2dda2ab804a5b75aebc1609ba9ce7336" target="_blank" rel="noopener">Contract</a>
+        <a class="btn" href="https://t.me/poorcoin_bsc" target="_blank" rel="noopener">Telegram</a>
+        <a class="btn" href="https://x.com/SeeeskoTodorov" target="_blank" rel="noopener">Twitter</a>
+        <a class="btn" href="https://medium.com/@seeesko/poorcoin-poor-the-peoples-meme-token-2c7d47ef2989" target="_blank" rel="noopener">Medium</a>
+        <a class="btn primary" href="https://poorcoin.net" rel="noopener">Website</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section>
-      <h2>About PoorCoin</h2>
-      <p>
-        PoorCoin (POOR) is a community-driven meme token on BNB Smart Chain.
-        Contract: <b>0x6208384e2dda2ab804a5b75aebc1609ba9ce7336</b>
-      </p>
-    </section>
-  </main>
+  <main class="wrap hero">
+    <div class="grid">
+      <!-- Ляво: лого в бяло поле (ефектна „картичка“) -->
+      <section class="card">
+        <div class="card-body">
+          <div class="kicker">Official Logo</div>
+          <h1 class="title">PoorCoin (POOR)</h1>
+          <div class="logo-card">
+            <div class="logo-wrap logo" aria-label="PoorCoin logo">
+              <!-- Голямото лого – черно „POOR“ със слабо наклонение -->
+              <svg viewBox="0 0 600 220" role="img" aria-label="POOR logo">
+                <rect x="0" y="0" width="600" height="220" fill="#ffffff" rx="12"/>
+                <g transform="skewX(-12)">
+                  <text x="300" y="145" text-anchor="middle"
+                        font-family="Arial Black, sans-serif"
+                        font-size="150" font-weight="900" fill="#000">POOR</text>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <footer>
-    <p>Contact: <a href="mailto:team@poorcoin.net">team@poorcoin.net</a></p>
-    <p>© 2025 PoorCoin</p>
-  </footer>
-</body>
-</html>
+      <!-- Дясно: инфо и линкове -->
+      <aside class="card">
+        <div class="card-body stack">
+          <div>
+            <div class="kicker">BNB Smart Chain • BEP-20</div>
+            <h2 class="title" style="font-size:1.4rem">Project Links</h2>
+            <ul class="list">
+              <li>Website: <a href="https://poorcoin.net" target="_blank" rel="noopener">poorcoin.net</a></li>
+              <li>Contract (BscScan):
+                <a href="https://bscscan.com/token/0x6208384e2dda2ab804a5b75aebc1609ba9ce7336" target="_blank" rel="noopener">
+                  0x6208…7336
+                </a>
+              </li>
+              <li>Telegram: <a href="https://t.me/poorcoin_bsc" target="_blank" rel="noopener">@poorcoin_bsc</a></li>
+              <li>Twitter (X): <a href="https://x.com/SeeeskoTodorov" target="_blank" rel="noopener">@SeeeskoTodorov</a></li>
+              <li>Medium:
+                <a href="https://medium.com/@seeesko/poorcoin-poor-the-peoples-meme-token-2c7d47ef2989" target="_blank" rel="noopener">
+                  PoorCoin article
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="title" style="font-size:1.2rem;margin-top:6px;">Contract Address</h3>
+            <div class="copy">
+              <code c
