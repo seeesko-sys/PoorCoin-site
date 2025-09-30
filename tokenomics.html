@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PoorCoin (POOR) — Tokenomics & Distribution</title>
+<meta name="description" content="PoorCoin (POOR) tokenomics, top holders, distribution schedule, and official links." />
+<style>
+  :root{
+    --bg:#f6f7fb;
+    --card:#ffffff;
+    --text:#0f172a;
+    --muted:#64748b;
+    --accent:#111827;
+    --ring:#e5e7eb;
+    --pill:#eef2ff;
+    --pill-text:#3730a3;
+    --shadow:0 10px 30px rgba(2,6,23,.06);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Noto Sans","Helvetica Neue",Arial,"Apple Color Emoji","Segoe UI Emoji"}
+  a{color:#2563eb;text-decoration:none} a:hover{text-decoration:underline}
+  .container{max-width:1100px;margin:40px auto;padding:0 20px}
+  .nav{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:18px}
+  .pill{background:var(--pill);color:var(--pill-text);padding:6px 12px;border-radius:999px;font-weight:600}
+  .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:24px}
+  @media (max-width:960px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--ring);border-radius:18px;box-shadow:var(--shadow)}
+  .card h2{margin:0 0 10px 0;font-size:20px}
+  .card .body{padding:22px}
+  .hero{padding:26px 22px 10px 22px}
+  .logoWrap{display:flex;align-items:center;gap:18px}
+  .logo{width:112px;height:112px;border-radius:16px;background:#fff;display:flex;align-items:center;justify-content:center;border:1px solid var(--ring);box-shadow:var(--shadow)}
+  .logo img{max-width:92%;max-height:92%}
+  .title{font-size:26px;font-weight:800;letter-spacing:.2px}
+  .muted{color:var(--muted)}
+  .row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:8px;background:#111827;color:#fff;padding:10px 14px;border-radius:12px;border:0;cursor:pointer;font-weight:700}
+  .btn:active{transform:translateY(1px)}
+  .copy{background:#0ea5e9}
+  .table{width:100%;border-collapse:separate;border-spacing:0 10px}
+  .table th{color:var(--muted);font-weight:700;text-align:left;padding:0 14px}
+  .table td{background:var(--card);border:1px solid var(--ring);padding:14px;border-left:0;border-right:0}
+  .table tr{border-radius:12px;overflow:hidden}
+  .kbd{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;background:#0b1220;color:#e2e8f0;padding:.2rem .45rem;border-radius:.5rem;border:1px solid #1f2937}
+  .chart{width:280px;height:280px;border-radius:50%;background:
+      conic-gradient(#111827 0 77.97%, #1f6feb 0 97.97%, #16a34a 0 99.55%, #f59e0b 0 100%);
+      position:relative;margin:auto;border:10px solid var(--card);box-shadow:var(--shadow)}
+  .chart:after{content:"";position:absolute;inset:22px;border-radius:50%;background:var(--card)}
+  .legend{display:grid;gap:10px;margin-top:12px}
+  .legend .item{display:flex;align-items:center;gap:10px}
+  .dot{width:14px;height:14px;border-radius:3px}
+  .dot.team{background:#111827}
+  .dot.lock{background:#1f6feb}
+  .dot.liq{background:#16a34a}
+  .dot.other{background:#f59e0b}
+  footer{margin:40px 0 30px;text-align:center;color:var(--text);font-weight:800;letter-spacing:.6px}
+</style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- top breadcrumbs / quick links -->
+    <div class="nav">
+      <span class="pill">PoorCoin (POOR)</span>
+      <a class="pill" href="https://bscscan.com/token/0x6208384e2dda2ab804a5b75aebc1609ba9ce7336" target="_blank" rel="noopener">BscScan</a>
+      <a class="pill" href="https://pancakeswap.finance/info/pairs/0xf6fa8d299245a86270d054632de4b55ee017de723" target="_blank" rel="noopener">PancakeSwap Pair</a>
+      <a class="pill" href="index.html">Home</a>
+    </div>
+
+    <!-- hero -->
+    <div class="card hero">
+      <div class="logoWrap">
+        <div class="logo">
+          <!-- твоето PNG лого -->
+          <img src="poorcoin_logo.png" alt="PoorCoin logo" />
+        </div>
+        <div>
+          <div class="title">Tokenomics & Distribution</div>
+          <div class="muted">BNB Smart Chain (BEP-20) · Symbol <strong>POOR</strong></div>
+          <div class="row" style="margin-top:10px">
+            <span class="muted">Contract:</span>
+            <code class="kbd" id="ctr">0x6208384e2dda2ab804a5b75aebc1609ba9ce7336</code>
+            <button class="btn copy" onclick="copyCtr()">Copy</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GRID -->
+    <div class="grid" style="margin-top:22px">
+
+      <!-- distribution / table -->
+      <div class="card">
+        <div class="body">
+          <h2>Distribution (Total supply: 1,000,000,000 POOR)</h2>
+          <table class="table" aria-label="Token Distribution">
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Amount</th>
+                <th>%</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Team / Main wallet (owner)</td>
+                <td>779,704,502</td>
+                <td>77.97%</td>
+              </tr>
+              <tr>
+                <td>Locked / Vesting (liquidity locks)</td>
+                <td>200,000,000</td>
+                <td>20.00%</td>
+              </tr>
+              <tr>
+                <td>Liquidity (PancakeSwap pool)</td>
+                <td>15,750,000</td>
+                <td>1.58%</td>
+              </tr>
+              <tr>
+                <td>Other holders / buyers</td>
+                <td>4,545,498</td>
+                <td>0.45%</td>
+              </tr>
+              <tr>
+                <td><strong>Total</strong></td>
+                <td><strong>1,000,000,000</strong></td>
+                <td><strong>100%</strong></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div style="margin-top:14px" class="muted">
+            Top holders list: <a href="https://bscscan.com/token/0x6208384e2dda2ab804a5b75aebc1609ba9ce7336#balances" target="_blank" rel="noopener">BscScan &rarr; Holders</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- donut chart + quick links -->
+      <div class="card">
+        <div class="body">
+          <h2>Visual Split</h2>
+          <div class="chart" role="img" aria-label="Distribution donut chart"></div>
+          <div class="legend">
+            <div class="item"><span class="dot team"></span><span>Team / Main wallet — 77.97%</span></div>
+            <div class="item"><span class="dot lock"></span><span>Locked / Vesting — 20.00%</span></div>
+            <div class="item"><span class="dot liq"></span><span>Liquidity Pool — 1.58%</span></div>
+            <div class="item"><span class="dot other"></span><span>Other holders — 0.45%</span></div>
+          </div>
+
+          <div style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn" href="https://pancakeswap.finance/swa
