@@ -3,140 +3,189 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PoorCoin (POOR) — Official Site</title>
+  <title>PoorCoin (POOR) - Official Site</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f4f7fb;
       margin: 0;
       padding: 0;
+      background: #f9fafc;
       color: #222;
+      line-height: 1.6;
     }
     header {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    header img {
+      height: 80px;
+      margin-bottom: 10px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+    header p {
+      font-size: 16px;
+      color: #ccc;
+    }
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
       background: #fff;
-      padding: 15px 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    h2 {
+      border-left: 5px solid #007bff;
+      padding-left: 10px;
+      color: #007bff;
+      margin-bottom: 15px;
+    }
+    .contract-box {
+      background: #f1f1f1;
+      padding: 10px;
+      border-radius: 6px;
+      word-break: break-all;
+      font-family: monospace;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
     }
-    header img {
-      height: 40px;
-    }
-    nav a {
-      margin: 0 12px;
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-    }
-    nav a:hover {
-      color: #007bff;
-    }
-    .container {
-      max-width: 1100px;
-      margin: 20px auto;
-      padding: 20px;
-    }
-    .card {
-      background: #fff;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    }
-    h2 {
-      margin-top: 0;
-    }
-    .buttons a {
-      display: inline-block;
-      margin: 8px 10px 0 0;
-      padding: 10px 16px;
+    button {
+      padding: 10px 15px;
+      margin: 5px;
+      border: none;
+      border-radius: 6px;
       background: #007bff;
       color: #fff;
-      border-radius: 6px;
-      text-decoration: none;
-      font-size: 14px;
+      cursor: pointer;
     }
-    .buttons a:hover {
+    button:hover {
       background: #0056b3;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    th {
+      background: #f4f4f4;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      margin: 8px 0;
+    }
+    ul li a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    ul li a:hover {
+      text-decoration: underline;
     }
     footer {
       text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-      background: #fff;
-      border-top: 1px solid #ddd;
+      padding: 15px;
+      background: #111;
+      color: #ccc;
+      font-size: 14px;
+      margin-top: 20px;
     }
-    html {
-      scroll-behavior: smooth;
+    footer b {
+      color: #fff;
     }
   </style>
+  <script>
+    function copyContract() {
+      const contract = "0x6208384e2dda2ab804a5b75aebc1609ba9ce7336";
+      navigator.clipboard.writeText(contract).then(() => {
+        alert("Contract address copied!");
+      });
+    }
+  </script>
 </head>
 <body>
 
 <header>
-  <!-- <img src="poorcoin_logo_.png" alt="poorcoin_logo_.png"> -->
-  <nav>
-    <a class="navlink" href="#tokenomics" data-scroll="#tokenomics">Tokenomics</a>
-    <a class="navlink" href="#project-links" data-scroll="#project-links">Links</a>
-    <a class="navlink" href="whitepaper.html" target="_blank">Whitepaper</a>
-  </nav>
+  <img src="poorcoin_logo_.png" alt="PoorCoin Logo">
+  <h1>PoorCoin (POOR)</h1>
+  <p>The People's Meme Token — Binance Smart Chain (BEP-20)</p>
 </header>
 
 <div class="container">
-  <section class="card">
-    <h2>POOR — The People's Meme Token (BEP-20)</h2>
-    <p><strong>Contract Address:</strong></p>
-    <p style="background:#eee;padding:8px;border-radius:6px;word-break:break-all;">
-      0x6208384e2dda2ab804a5b75aebc1609ba9ce7336
-    </p>
-    <div class="buttons">
-      <a href="https://bscscan.com/token/0x6208384e2dda2ab804a5b75aebc1609ba9ce7336" target="_blank">View on BscScan</a>
-      <a href="https://pancakeswap.finance/info/pairs/0xf6fa8d299245a8627d054632de4b55ee017de723" target="_blank">Buy on PancakeSwap</a>
-      <a href="https://pancakeswap.finance/add/BNB/0x6208384e2dda2ab804a5b75aebc1609ba9ce7336" target="_blank">Add Liquidity</a>
+  <div class="section">
+    <h2>Contract Address</h2>
+    <div class="contract-box">
+      <span>0x6208384e2dda2ab804a5b75aebc1609ba9ce7336</span>
+      <button onclick="copyContract()">Copy</button>
     </div>
-  </section>
+    <div style="margin-top:15px;">
+      <button onclick="window.open('https://bscscan.com/token/0x6208384e2dda2ab804a5b75aebc1609ba9ce7336','_blank')">View on BscScan</button>
+      <button onclick="window.open('https://pancakeswap.finance/info/pairs/0xf6fa8d299245a8627d054632de4b55ee017de723','_blank')">Buy on PancakeSwap</button>
+      <button onclick="window.open('https://poorcoin.net/whitepaper.pdf','_blank')">Whitepaper</button>
+    </div>
+  </div>
 
-  <section id="tokenomics" class="card">
+  <div class="section">
     <h2>Tokenomics</h2>
-    <p>Total Supply: 1,000,000,000 POOR</p>
-    <ul>
-      <li><b>Team / Main wallet:</b> 779,704,502 POOR (77.97%)</li>
-      <li><b>Locked (vesting):</b> 200,000,000 POOR (20%)</li>
-      <li><b>Liquidity (PancakeSwap):</b> 15,750,000 POOR (1.58%)</li>
-      <li><b>Other holders / buyers:</b> 4,545,498 POOR (0.45%)</li>
-    </ul>
-  </section>
+    <table>
+      <tr>
+        <th>Category</th>
+        <th>Amount</th>
+        <th>Percentage</th>
+      </tr>
+      <tr>
+        <td>Team / Main wallet (owner)</td>
+        <td>779,704,502</td>
+        <td>77.97%</td>
+      </tr>
+      <tr>
+        <td>Locked (vesting)</td>
+        <td>200,000,000</td>
+        <td>20.00%</td>
+      </tr>
+      <tr>
+        <td>Liquidity (PancakeSwap pool)</td>
+        <td>15,750,000</td>
+        <td>1.58%</td>
+      </tr>
+      <tr>
+        <td>Other holders / buyers</td>
+        <td>4,545,498</td>
+        <td>0.45%</td>
+      </tr>
+    </table>
+  </div>
 
-  <section id="project-links" class="card">
+  <div class="section">
     <h2>Project Links</h2>
     <ul>
-      <li><a href="https://poorcoin.net" target="_blank">Website</a></li>
-      <li><a href="https://t.me/poorcoin_bsc" target="_blank">Telegram</a></li>
-      <li><a href="https://twitter.com/SeeeskoTodorov" target="_blank">Twitter / X</a></li>
-      <li><a href="https://medium.com/@seeesko/poorcoin-poor-the-peoples-meme-token-2c7d47ef2989" target="_blank">Medium</a></li>
+      <li><a href="https://poorcoin.net" target="_blank">🌐 Website</a></li>
+      <li><a href="https://t.me/poorcoin_bsc" target="_blank">💬 Telegram</a></li>
+      <li><a href="https://twitter.com/SeeeskoTodorov" target="_blank">🐦 Twitter / X</a></li>
+      <li><a href="https://medium.com/@seeesko" target="_blank">📄 Medium</a></li>
     </ul>
-  </section>
+  </div>
 </div>
 
 <footer>
-  <p>© 2025 PoorCoin. All Rights Reserved.</p>
-  <p><b>BY TODOROV & LESEV</b></p>
+  © 2025 PoorCoin. All Rights Reserved. <br>
+  BY <b>TODOROV & LESEV</b>
 </footer>
-
-<script>
-// плавен скрол към секции
-document.querySelectorAll('[data-scroll]').forEach(a=>{
-  a.addEventListener('click', e=>{
-    e.preventDefault();
-    const target = document.querySelector(a.dataset.scroll);
-    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-});
-</script>
 
 </body>
 </html>
